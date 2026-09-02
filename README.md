@@ -1,6 +1,22 @@
 # LLM Transmission 8GB
 
-A local LLM routing service for the NVIDIA Jetson Nano 8GB. Classifies incoming prompts, presents the top 6 model options to the operator, then runs the prompt with the selected model using its best settings — all locally, zero cloud tokens.
+![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
+![Platform](https://img.shields.io/badge/platform-NVIDIA%20Jetson%20Nano%208GB-76B900.svg)
+![Models](https://img.shields.io/badge/models-27%20tested-orange.svg)
+![Tests](https://img.shields.io/badge/tests-31%20passing-brightgreen.svg)
+![Benchmark](https://img.shields.io/badge/scored%20rows-2%2C916-blue.svg)
+![Cloud](https://img.shields.io/badge/cloud%20tokens-zero-success.svg)
+![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)
+![llama.cpp](https://img.shields.io/badge/engine-llama.cpp%20CUDA-red.svg)
+![ARM64](https://img.shields.io/badge/arch-ARM64-aarch64.svg)
+
+![Categories](https://img.shields.io/badge/categories-4-purple.svg)
+![Top Models](https://img.shields.io/badge/top%20models-6%20per%20category-ff69b4.svg)
+![DeepSeek Fix](https://img.shields.io/badge/DeepSeek-chatml%20fix-yellow.svg)
+![k=40](https://img.shields.io/badge/top_k-40%20optimal-blueviolet.svg)
+![Champion](https://img.shields.io/badge/champion-hermes3--3b--q5%20(7.8)--gold.svg)
+
+A local LLM routing service for the NVIDIA Jetson Nano 8GB. Classifies incoming prompts, presents the top 6 model options to the operator, then runs the prompt with the selected model with its best settings — all locally, zero cloud tokens.
 
 ## What It Does
 
