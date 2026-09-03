@@ -1,7 +1,7 @@
 {
   "title": "LLM Transmission 8GB \u2014 Comprehensive Findings Report",
-  "author": "Walker (drwjkirkpatrick-web)",
-  "subject": "27-model LLM benchmark findings, ideal settings, and transmission service methodology",
+  "author": "Walker (drwjkirkpatrick-web) \u2014 Phosphorus personality",
+  "subject": "27-model LLM benchmark findings, ideal settings, template fixes, and transmission methodology",
   "elements": [
     {
       "type": "heading",
@@ -14,11 +14,15 @@
     },
     {
       "type": "paragraph",
-      "text": "NVIDIA Jetson Nano 8GB | llama.cpp CUDA | 27 models benchmarked"
+      "text": "Written in the Phosphorus remedy personality \u2014 The Charismatic Communicator"
     },
     {
       "type": "paragraph",
-      "text": "This report documents the complete benchmark findings across 27 local LLMs, the ideal settings for each model, and the methodology used to create the LLM Transmission routing service."
+      "text": "NVIDIA Jetson Nano 8GB | llama.cpp CUDA | 27 models benchmarked | 2,916 scored rows"
+    },
+    {
+      "type": "paragraph",
+      "text": "Welcome! This report shares everything we learned from systematically testing 27 local LLMs on an 8GB Jetson edge device. We swept temperature across 7 values, top_k across 3 values, discovered and fixed two major chat template bugs, and built a routing service that uses these findings to pick the best model for any prompt \u2014 all locally, zero cloud tokens."
     },
     {
       "type": "pagebreak"
@@ -30,35 +34,35 @@
     },
     {
       "type": "paragraph",
-      "text": "1. Methodology \u2014 How We Benchmarked 27 Models"
+      "text": "1. The Story \u2014 How We Benchmarked 27 Models"
     },
     {
       "type": "paragraph",
-      "text": "2. Summary Leaderboard \u2014 All 27 Models Ranked"
+      "text": "2. The Leaderboard \u2014 All 27 Models Ranked"
     },
     {
       "type": "paragraph",
-      "text": "3. Temperature Sweep Findings"
+      "text": "3. Temperature Sweep \u2014 Finding Each Model's Sweet Spot"
     },
     {
       "type": "paragraph",
-      "text": "4. Top-K Sweep Findings"
+      "text": "4. Top-K Sweep \u2014 Confirming the Universal Default"
     },
     {
       "type": "paragraph",
-      "text": "5. DeepSeek Template Discovery"
+      "text": "5. The Great Template Discovery \u2014 DeepSeek & E2B Fixes"
     },
     {
       "type": "paragraph",
-      "text": "6. Per-Model Findings (27 models, each with ideal settings)"
+      "text": "6. Per-Model Findings \u2014 27 Models, Each with Ideal Settings"
     },
     {
       "type": "paragraph",
-      "text": "7. Category Analysis \u2014 Coding, Creative, Function Calls"
+      "text": "7. Category Analysis \u2014 Who Shines Where"
     },
     {
       "type": "paragraph",
-      "text": "8. How We Built the Transmission Service"
+      "text": "8. Building the Transmission \u2014 From Data to Service"
     },
     {
       "type": "paragraph",
@@ -66,7 +70,7 @@
     },
     {
       "type": "paragraph",
-      "text": "10. Conclusions and Next Steps"
+      "text": "10. What We Learned and Where We're Going"
     },
     {
       "type": "pagebreak"
@@ -74,21 +78,21 @@
     {
       "type": "heading",
       "level": 1,
-      "text": "1. Methodology \u2014 How We Benchmarked 27 Models"
+      "text": "1. The Story \u2014 How We Benchmarked 27 Models"
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Hardware"
+      "text": "The Setup"
     },
     {
       "type": "paragraph",
-      "text": "All tests run on NVIDIA Jetson Nano 8GB using llama.cpp with CUDA acceleration (-ngl 999 -fa on). The GUI (gdm3) was disabled during benchmarking to maximize available RAM for model inference."
+      "text": "Picture this: an 8GB NVIDIA Jetson sitting on a desk, its GPU fully offloaded with llama.cpp CUDA, flash attention cranked on, the GUI disabled to squeeze every megabyte of RAM for model inference. That's the stage. On it, we loaded 27 quantized language models \u2014 from tiny 1B parameters up to a 7B DeepSeek R1 \u2014 and ran each through a carefully designed gauntlet of 12 prompts spanning 6 categories."
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Prompt Suite \u2014 12 Prompts Across 6 Categories"
+      "text": "The 12-Prompt Gauntlet"
     },
     {
       "type": "table",
@@ -97,73 +101,79 @@
           "Prompt ID",
           "Category",
           "Description",
-          "Scoring Criteria"
+          "What We Scored"
         ],
         [
           "html_profiles",
           "HTML",
-          "Profile cards page with CSS flexbox",
-          "Valid HTML, flexbox layout, responsive design"
+          "Profile cards with flexbox",
+          "Valid HTML, responsive layout, hover effects"
         ],
         [
           "html_game",
           "HTML",
-          "Web browser game (Pong/breakout)",
-          "Playable game, canvas/JS, game loop"
+          "Browser game with canvas",
+          "Playable game, JS logic, scoring"
         ],
         [
           "python_code",
           "Python",
-          "Merge sorted lists function",
-          "Correct algorithm, edge cases, clean code"
+          "Grade processing function",
+          "Correct algorithm, type hints, docstring"
         ],
         [
           "math_proof",
           "Math",
-          "Prove sum of first n = n(n+1)/2",
-          "Valid proof structure, induction or direct"
+          "Induction proof: n(n+1)/2",
+          "Valid proof structure, logical flow"
         ],
         [
           "iambic_pentameter",
           "Poetry",
           "14-line poem about a storm",
-          "Correct meter, rhyme scheme, 14 lines"
+          "Strict meter, rhyme scheme, line count"
         ],
         [
           "creative_writing",
           "Creative",
-          "Short story about a lighthouse",
-          "Narrative arc, character, setting, prose quality"
+          "Short story about a guitar",
+          "Narrative arc, character, prose quality"
         ],
         [
           "func_terminal",
           "Function Call",
-          "Terminal command to check disk",
-          "Valid tool-call JSON format"
+          "Check disk usage",
+          "Valid JSON tool-call format"
         ],
         [
           "func_write_file",
           "Function Call",
-          "Write a file to disk",
-          "Valid tool-call JSON format"
+          "Create todo.txt",
+          "Valid JSON tool-call format"
         ],
         [
           "func_read_file",
           "Function Call",
-          "Read a file from disk",
-          "Valid tool-call JSON format"
+          "Read /etc/hostname",
+          "Valid JSON tool-call format"
         ],
         [
           "func_sqlite",
           "Function Call",
-          "SQLite query for patients",
+          "Query clinic database",
           "Valid SQL in tool-call format"
         ],
         [
           "func_email",
           "Function Call",
-          "Draft an email to a patient",
+          "Draft rescheduling email",
           "Valid email in tool-call format"
+        ],
+        [
+          "func_web_search",
+          "Function Call",
+          "Search renewable energy",
+          "Valid search tool-call format"
         ]
       ],
       "column_widths": [
@@ -176,64 +186,70 @@
     {
       "type": "heading",
       "level": 2,
-      "text": "Scoring System"
+      "text": "How We Scored"
     },
     {
       "type": "paragraph",
-      "text": "Each prompt was scored on a 0-10 scale based on task-specific criteria. Scores were assigned by analyzing the model output against expected structure, correctness, completeness, and format compliance. For function calls, the key criterion was producing valid JSON tool-call format (not prose descriptions). For poetry, strict iambic pentameter meter and correct rhyme scheme were required for high scores."
+      "text": "Every prompt was scored on a 0-10 scale. For code, we checked correctness, edge cases, and clean style. For poetry, we verified strict iambic pentameter meter \u2014 no easy feat for a 3B model! For function calls, the make-or-break criterion was whether the model produced valid JSON tool-call format, not just prose that described what it would do. That distinction matters: most models can describe a tool call in English, but far fewer can actually produce the structured JSON that a real agent system needs."
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Sweep Methodology"
+      "text": "The Sweep Strategy"
     },
     {
       "type": "paragraph",
-      "text": "Each model was tested across multiple parameter sweeps, one variable at a time. Quality was always evaluated before speed \u2014 a model that produces wrong answers quickly is not useful."
+      "text": "We followed one golden rule: quality before speed. A model that generates wrong answers quickly is useless. So we optimized one variable at a time:"
     },
     {
       "type": "table",
       "data": [
         [
           "Sweep",
-          "Values Tested",
+          "Values",
           "Total Runs",
-          "Key Finding"
+          "What We Found"
         ],
         [
           "Temperature",
-          "0.0, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0 (7 values)",
-          "27 \u00d7 7 \u00d7 12 = 2,268",
+          "0.0, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0",
+          "2,268",
           "7 models peak at t=0.3, 7 at t=1.0"
         ],
         [
           "Top-K",
-          "20, 40, 64 (3 values)",
-          "27 \u00d7 3 \u00d7 12 = 972",
-          "k=40 wins 19/27 models (70%)"
+          "20, 40, 64",
+          "972",
+          "k=40 wins 21/27 models (78%)"
         ],
         [
-          "Template Fix",
+          "Template Fix - DeepSeek",
           "deepseek vs chatml",
-          "DeepSeek R1 1.5B + 7B",
-          "chatml fixes DeepSeek \u2014 3.7\u21925.3, 2.4\u21926.2"
+          "24 re-runs",
+          "chatml fixes: 3.7 to 5.3, 2.4 to 6.2"
+        ],
+        [
+          "Template Fix - E2B",
+          "gemma vs chatml",
+          "240 re-runs",
+          "chatml fixes: 1.9 to 7.1, 0.8 to 6.0"
         ]
       ],
       "column_widths": [
+        100,
+        140,
         80,
-        160,
-        120,
         180
       ]
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Standard Parameters (held constant)"
+      "text": "Constants We Held Steady"
     },
     {
       "type": "paragraph",
-      "text": "top_p = 0.9 | repeat_penalty = 1.1 | max_tokens = 2048 | Context = 16384 (32k for non-thinking models where VRAM allows) | chat template = per-model (chatml for most, gemma for Gemma models, chatml for DeepSeek R1 distills)"
+      "text": "top_p = 0.9 | repeat_penalty = 1.1 | max_tokens = 2048 | GPU layers = 999 (all) | Flash attention = on. These stayed fixed so we could isolate the effect of each variable we swept."
     },
     {
       "type": "pagebreak"
@@ -241,11 +257,11 @@
     {
       "type": "heading",
       "level": 1,
-      "text": "2. Summary Leaderboard \u2014 All 27 Models Ranked"
+      "text": "2. The Leaderboard \u2014 All 27 Models Ranked"
     },
     {
       "type": "paragraph",
-      "text": "Overall score is the average across all 12 prompts at each model's best temperature with k=40. Group scores are averages within each category."
+      "text": "Here it is \u2014 the full picture. Every model, ranked by its overall average across all 12 prompts at its best temperature with k=40. The group columns show where each model shines or stumbles."
     },
     {
       "type": "table",
@@ -373,6 +389,17 @@
         ],
         [
           "11",
+          "gemma3n-e2b",
+          "7.1",
+          "9.2",
+          "9.5",
+          "4.8",
+          "21.5",
+          "0.7",
+          "yes"
+        ],
+        [
+          "12",
           "granite3.2-2b",
           "7.0",
           "9.5",
@@ -383,7 +410,7 @@
           "no"
         ],
         [
-          "12",
+          "13",
           "granite4.2-3b",
           "6.9",
           "9.5",
@@ -394,7 +421,7 @@
           "no"
         ],
         [
-          "13",
+          "14",
           "qwen2.5-coder-3b",
           "6.9",
           "9.5",
@@ -405,7 +432,7 @@
           "no"
         ],
         [
-          "14",
+          "15",
           "granite4-3b",
           "6.8",
           "9.5",
@@ -416,7 +443,7 @@
           "no"
         ],
         [
-          "15",
+          "16",
           "stablelm-zephyr",
           "6.8",
           "9.8",
@@ -427,7 +454,7 @@
           "no"
         ],
         [
-          "16",
+          "17",
           "lfm2.5-2.6b",
           "6.6",
           "10.0",
@@ -438,7 +465,18 @@
           "no"
         ],
         [
-          "17",
+          "18",
+          "gemma4-e2b",
+          "6.0",
+          "9.2",
+          "9.5",
+          "2.7",
+          "23.4",
+          "0.7",
+          "yes"
+        ],
+        [
+          "19",
           "deepseek-r1-1.5b",
           "5.3",
           "9.2",
@@ -449,7 +487,7 @@
           "yes"
         ],
         [
-          "18",
+          "20",
           "ministral-3b",
           "4.9",
           "7.2",
@@ -460,7 +498,7 @@
           "no"
         ],
         [
-          "19",
+          "21",
           "gemma2-2b",
           "4.5",
           "2.8",
@@ -471,7 +509,7 @@
           "no"
         ],
         [
-          "20",
+          "22",
           "llama3.2-3b",
           "2.8",
           "1.8",
@@ -482,7 +520,7 @@
           "no"
         ],
         [
-          "21",
+          "23",
           "gemma3-1b",
           "2.7",
           "2.2",
@@ -493,7 +531,7 @@
           "no"
         ],
         [
-          "22",
+          "24",
           "phi3-3.8b",
           "2.5",
           "2.2",
@@ -504,7 +542,7 @@
           "no"
         ],
         [
-          "23",
+          "25",
           "llama3.2-1b",
           "2.4",
           "1.2",
@@ -515,7 +553,7 @@
           "no"
         ],
         [
-          "24",
+          "26",
           "phi4-mini",
           "2.3",
           "2.5",
@@ -526,18 +564,7 @@
           "yes"
         ],
         [
-          "25",
-          "gemma3n-e2b",
-          "2.2",
-          "1.5",
-          "3.5",
-          "2.3",
-          "21.1",
-          "0.7",
-          "yes"
-        ],
-        [
-          "26",
+          "27",
           "llama3.2-3b-new",
           "2.2",
           "1.5",
@@ -546,17 +573,6 @@
           "19.7",
           "0.0",
           "no"
-        ],
-        [
-          "27",
-          "gemma4-e2b",
-          "1.2",
-          "0.0",
-          "3.5",
-          "1.3",
-          "19.8",
-          "0.5",
-          "yes"
         ]
       ],
       "column_widths": [
@@ -577,11 +593,11 @@
     {
       "type": "heading",
       "level": 1,
-      "text": "3. Temperature Sweep Findings"
+      "text": "3. Temperature Sweep \u2014 Finding Each Model's Sweet Spot"
     },
     {
       "type": "paragraph",
-      "text": "Each of the 27 models was tested at 7 temperatures (0.0, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0) with all other parameters held constant. The best temperature was locked per model based on highest average score across 12 prompts."
+      "text": "We tested every model at 7 temperatures, from frozen deterministic (0.0) to wild creative (1.0). The result? There is no universal best temperature. The distribution tells the story:"
     },
     {
       "type": "table",
@@ -613,13 +629,13 @@
         ],
         [
           "t=0.5",
-          "2",
-          "ministral-3b, gemma4-e2b"
+          "1",
+          "ministral-3b"
         ],
         [
           "t=0.7",
-          "3",
-          "hermes3-3b-q4, granite4-3b, gemma3n-e2b"
+          "4",
+          "hermes3-3b-q4, gemma3n-e2b, granite4-3b, gemma4-e2b"
         ],
         [
           "t=1.0",
@@ -635,7 +651,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Key insight: There is no single 'best' temperature. 7 models peak at t=0.3 and 7 at t=1.0, with the rest distributed across the range. Reasoning/thinking models (DeepSeek R1, Ministral Reasoning) tend to prefer low temperatures (0.0-0.3), while creative models (Granite 4.1, Qwen 3 1.7B) benefit from high temperatures (1.0). This is why the transmission service stores a per-model locked temperature rather than using a global default."
+      "text": "The pattern is beautiful: reasoning models (DeepSeek R1, Ministral Reasoning) crave low temperatures (0.0-0.3) where deterministic output helps them think step by step. Creative models (Granite 4.1, Qwen 3 1.7B) blossom at high temperatures (1.0) where randomness fuels imaginative connections. This is why our transmission service stores a per-model locked temperature \u2014 a global default would shortchange half the models."
     },
     {
       "type": "pagebreak"
@@ -643,37 +659,37 @@
     {
       "type": "heading",
       "level": 1,
-      "text": "4. Top-K Sweep Findings"
+      "text": "4. Top-K Sweep \u2014 Confirming the Universal Default"
     },
     {
       "type": "paragraph",
-      "text": "After locking the best temperature per model, we swept top_k across 3 values: 20, 40, and 64. This produced 27 \u00d7 3 \u00d7 12 = 972 additional scored runs."
+      "text": "After locking each model's best temperature, we swept top_k across 3 values. The verdict was decisive:"
     },
     {
       "type": "table",
       "data": [
         [
-          "Top-K Value",
+          "Top-K",
           "# Models Where Best",
           "Percentage",
           "Notes"
         ],
         [
           "k=20",
-          "5",
-          "19%",
-          "Slightly better for some high-temp creative models"
+          "0",
+          "0%",
+          "Better for some high-temp creative models"
         ],
         [
           "k=40",
-          "19",
-          "70%",
-          "Clear winner \u2014 default for the transmission service"
+          "0",
+          "0%",
+          "Clear winner \u2014 our default setting"
         ],
         [
           "k=64",
-          "3",
-          "11%",
+          "0",
+          "0%",
           "Marginally better for a few reasoning models"
         ]
       ],
@@ -686,7 +702,7 @@
     },
     {
       "type": "paragraph",
-      "text": "k=40 is the confirmed default for the transmission service. The 5 models that prefer k=20 are still tested at k=40 in the routing table (the difference is typically <0.3 points), and k=40 provides the best balance across all categories."
+      "text": "k=40 is the champion \u2014 78% of models prefer it. The 4 models that prefer k=20 lose less than 0.3 points at k=40, so we use k=40 as the universal default. One setting to rule them all, and in the routing table bind them."
     },
     {
       "type": "pagebreak"
@@ -694,83 +710,91 @@
     {
       "type": "heading",
       "level": 1,
-      "text": "5. DeepSeek Template Discovery"
+      "text": "5. The Great Template Discovery \u2014 DeepSeek & E2B Fixes"
     },
     {
       "type": "paragraph",
-      "text": "During benchmarking, DeepSeek R1-Distill models (1.5B and 7B) scored remarkably low \u2014 3.7 and 2.4 respectively. Investigation revealed the models were ignoring prompts entirely, hallucinating about 'DeepSeek company' instead of answering questions."
-    },
-    {
-      "type": "paragraph",
-      "text": "Root cause: The eval harness was using the 'deepseek' chat template, which is designed for the original DeepSeek Coder models. However, DeepSeek R1-Distill models are Qwen-architecture models fine-tuned by DeepSeek \u2014 they use the ChatML format (<|im_start|>/<|im_end|> tags), not the DeepSeek-specific format."
+      "text": "This is the story that made the biggest difference. Two model families were using the wrong chat template \u2014 and the fix transformed garbage into gold."
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Before Fix (deepseek template)"
+      "text": "DeepSeek R1 Distills: deepseek to chatml"
+    },
+    {
+      "type": "paragraph",
+      "text": "DeepSeek R1-Distill models are Qwen-architecture models fine-tuned by DeepSeek. The name says 'DeepSeek,' so we used the 'deepseek' chat template. Wrong! These models use ChatML format. With the wrong template, they hallucinated about 'DeepSeek company' instead of answering prompts. The fix was simple but dramatic:"
     },
     {
       "type": "table",
       "data": [
         [
           "Model",
-          "Avg Score",
-          "Symptoms"
+          "Before (deepseek)",
+          "After (chatml)",
+          "Improvement"
         ],
         [
           "deepseek-r1-1.5b",
           "3.7",
-          "Hallucinated about 'DeepSeek company', ignored prompts"
+          "5.3",
+          "+1.6 (43%)"
         ],
         [
           "deepseek-r1-7b",
           "2.4",
-          "Same hallucination, even worse compliance"
+          "6.2",
+          "+3.8 (158%)"
         ]
       ],
       "column_widths": [
         120,
-        70,
-        250
+        100,
+        100,
+        100
       ]
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "After Fix (chatml template)"
+      "text": "E2B MatFormer Models: gemma to chatml"
+    },
+    {
+      "type": "paragraph",
+      "text": "Gemma 3n E2B and Gemma 4 E2B are MatFormer models. The name says 'Gemma,' so we used the 'gemma' chat template. Again wrong! With the gemma template, gemma3n-e2b hallucinated about 'Gemini 1.5 Pro vs GPT-4 Turbo' and gemma4-e2b output only '_4'. Both were completely broken. Switching to chatml with --jinja brought them to life:"
     },
     {
       "type": "table",
       "data": [
         [
           "Model",
-          "Avg Score",
-          "Improvement",
-          "Key Changes"
+          "Before (gemma)",
+          "After (chatml)",
+          "Improvement"
         ],
         [
-          "deepseek-r1-1.5b",
-          "5.3",
-          "+1.6 (43%)",
-          "Coding/math: 9.2/10, produces reasoning + answer"
+          "gemma3n-e2b",
+          "1.9",
+          "7.1",
+          "+5.2 (273%)"
         ],
         [
-          "deepseek-r1-7b",
-          "6.2",
-          "+3.8 (158%)",
-          "Coding/math: 10/10 on HTML and math proofs"
+          "gemma4-e2b",
+          "0.8",
+          "6.0",
+          "+5.2 (650%)"
         ]
       ],
       "column_widths": [
         120,
-        60,
-        80,
-        200
+        100,
+        100,
+        100
       ]
     },
     {
       "type": "paragraph",
-      "text": "Lesson: Always verify the chat template matches the model's architecture, not just its name. A 'DeepSeek' model may not use the 'deepseek' template. This finding is encoded in the transmission service's routing table \u2014 both DeepSeek models use 'chatml' and the test suite includes a specific assertion (test_deepseek_uses_chatml_not_deepseek) to prevent regression."
+      "text": "The lesson shines bright: a model's name does not determine its chat template. DeepSeek R1 distills use chatml. E2B MatFormer models use chatml. Always verify the template matches the architecture, not the brand. Both fixes are now protected by test assertions in the transmission service to prevent regression."
     },
     {
       "type": "pagebreak"
@@ -778,11 +802,11 @@
     {
       "type": "heading",
       "level": 1,
-      "text": "6. Per-Model Findings \u2014 27 Models with Ideal Settings"
+      "text": "6. Per-Model Findings \u2014 27 Models, Each with Ideal Settings"
     },
     {
       "type": "paragraph",
-      "text": "Each model below includes its benchmark scores by category, ideal settings, per-prompt breakdown, and notable observations from the benchmark."
+      "text": "Here's where we get up close and personal with each model. For every one of the 27, you'll find its ideal settings, per-prompt score breakdown, and what we observed during testing."
     },
     {
       "type": "heading",
@@ -818,7 +842,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -919,15 +943,15 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at coding and math tasks"
+      "text": "- Excellent at coding & math"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at creative writing and poetry"
+      "text": "- Excellent at creative writing & poetry"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Recommended for production use"
+      "text": "- Recommended for production use"
     },
     {
       "type": "heading",
@@ -951,7 +975,7 @@
         ],
         [
           "Thinking Model",
-          "Yes (--jinja flag required)"
+          "Yes (--jinja required)"
         ],
         [
           "Best Temperature",
@@ -963,7 +987,7 @@
         ],
         [
           "Context Window",
-          "4096"
+          "4,096"
         ],
         [
           "Max Tokens",
@@ -1064,15 +1088,15 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Strong function-call format compliance"
+      "text": "- Strong function-call format compliance"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Reasoning model \u2014 produces thinking blocks before answers, needs --jinja flag"
+      "text": "- Reasoning model \u2014 produces thinking blocks, needs --jinja flag"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Recommended for production use"
+      "text": "- Recommended for production use"
     },
     {
       "type": "pagebreak"
@@ -1099,7 +1123,7 @@
         ],
         [
           "Thinking Model",
-          "Yes (--jinja flag required)"
+          "Yes (--jinja required)"
         ],
         [
           "Best Temperature",
@@ -1111,7 +1135,7 @@
         ],
         [
           "Context Window",
-          "2048"
+          "2,048"
         ],
         [
           "Max Tokens",
@@ -1202,19 +1226,23 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at coding and math tasks"
+      "text": "- Excellent at coding & math"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Slow generation (9.7 tok/s) \u2014 may timeout on long prompts"
+      "text": "- Slow generation (9.7 tok/s) \u2014 may timeout on long prompts"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Reasoning model \u2014 produces thinking blocks before answers, needs --jinja flag"
+      "text": "- Reasoning model \u2014 produces thinking blocks, needs --jinja flag"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Recommended for production use"
+      "text": "- Recommended for production use"
+    },
+    {
+      "type": "paragraph",
+      "text": "- DeepSeek R1 distill \u2014 chatml template fix applied (was deepseek, +43%/+158%)"
     },
     {
       "type": "heading",
@@ -1250,7 +1278,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -1351,11 +1379,11 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at coding and math tasks"
+      "text": "- Excellent at coding & math"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Recommended for production use"
+      "text": "- Recommended for production use"
     },
     {
       "type": "pagebreak"
@@ -1394,7 +1422,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -1495,11 +1523,11 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at coding and math tasks"
+      "text": "- Excellent at coding & math"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Recommended for production use"
+      "text": "- Recommended for production use"
     },
     {
       "type": "heading",
@@ -1523,7 +1551,7 @@
         ],
         [
           "Thinking Model",
-          "Yes (--jinja flag required)"
+          "Yes (--jinja required)"
         ],
         [
           "Best Temperature",
@@ -1535,7 +1563,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -1636,19 +1664,19 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at coding and math tasks"
+      "text": "- Excellent at coding & math"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at creative writing and poetry"
+      "text": "- Excellent at creative writing & poetry"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Reasoning model \u2014 produces thinking blocks before answers, needs --jinja flag"
+      "text": "- Reasoning model \u2014 produces thinking blocks, needs --jinja flag"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Recommended for production use"
+      "text": "- Recommended for production use"
     },
     {
       "type": "pagebreak"
@@ -1687,7 +1715,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -1788,11 +1816,11 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at coding and math tasks"
+      "text": "- Excellent at coding & math"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Recommended for production use"
+      "text": "- Recommended for production use"
     },
     {
       "type": "heading",
@@ -1816,7 +1844,7 @@
         ],
         [
           "Thinking Model",
-          "Yes (--jinja flag required)"
+          "Yes (--jinja required)"
         ],
         [
           "Best Temperature",
@@ -1828,7 +1856,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -1929,19 +1957,19 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at coding and math tasks"
+      "text": "- Excellent at coding & math"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at creative writing and poetry"
+      "text": "- Excellent at creative writing & poetry"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Reasoning model \u2014 produces thinking blocks before answers, needs --jinja flag"
+      "text": "- Reasoning model \u2014 produces thinking blocks, needs --jinja flag"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Recommended for production use"
+      "text": "- Recommended for production use"
     },
     {
       "type": "pagebreak"
@@ -1980,7 +2008,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -2081,15 +2109,15 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at coding and math tasks"
+      "text": "- Excellent at coding & math"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Fast generation (30.8 tok/s)"
+      "text": "- Fast generation (30.8 tok/s)"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Recommended for production use"
+      "text": "- Recommended for production use"
     },
     {
       "type": "heading",
@@ -2125,7 +2153,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -2226,11 +2254,11 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at coding and math tasks"
+      "text": "- Excellent at coding & math"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Recommended for production use"
+      "text": "- Recommended for production use"
     },
     {
       "type": "pagebreak"
@@ -2238,7 +2266,160 @@
     {
       "type": "heading",
       "level": 2,
-      "text": "#11 \u2014 granite3.2-2b"
+      "text": "#11 \u2014 gemma3n-e2b"
+    },
+    {
+      "type": "table",
+      "data": [
+        [
+          "Setting",
+          "Value"
+        ],
+        [
+          "File",
+          "gemma-3n-E2B-it-Q4_K_M.gguf"
+        ],
+        [
+          "Chat Template",
+          "chatml"
+        ],
+        [
+          "Thinking Model",
+          "Yes (--jinja required)"
+        ],
+        [
+          "Best Temperature",
+          "0.7"
+        ],
+        [
+          "Top-K",
+          "40"
+        ],
+        [
+          "Context Window",
+          "2,048"
+        ],
+        [
+          "Max Tokens",
+          "2048"
+        ],
+        [
+          "Top-P",
+          "0.9"
+        ],
+        [
+          "Repeat Penalty",
+          "1.1"
+        ]
+      ],
+      "column_widths": [
+        120,
+        300
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Overall: 7.1/10 | Coding/Math: 9.2 | Creative/Poetry: 9.5 | Function Calls: 4.8 | Speed: 21.5 tok/s"
+    },
+    {
+      "type": "table",
+      "data": [
+        [
+          "Prompt",
+          "Score",
+          "Speed (t/s)"
+        ],
+        [
+          "Creative Writing - Short Story",
+          "9/10",
+          "21.3"
+        ],
+        [
+          "Function Call: Email Draft",
+          "9/10",
+          "21.1"
+        ],
+        [
+          "Function Call: Read File",
+          "2/10",
+          "21.5"
+        ],
+        [
+          "Function Call: SQLite Query",
+          "2/10",
+          "20.9"
+        ],
+        [
+          "Function Call: Terminal Command",
+          "10/10",
+          "21.6"
+        ],
+        [
+          "Function Call: Web Search",
+          "4/10",
+          "21.9"
+        ],
+        [
+          "Function Call: Write File",
+          "2/10",
+          "21.5"
+        ],
+        [
+          "HTML Web Browser Game",
+          "10/10",
+          "21.7"
+        ],
+        [
+          "HTML Profile Cards Page",
+          "9/10",
+          "21.7"
+        ],
+        [
+          "Iambic Pentameter Poem",
+          "10/10",
+          "21.5"
+        ],
+        [
+          "Mathematical Proof",
+          "8/10",
+          "21.7"
+        ],
+        [
+          "Python Data Processing",
+          "10/10",
+          "21.7"
+        ]
+      ],
+      "column_widths": [
+        250,
+        60,
+        80
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "- Excellent at coding & math"
+    },
+    {
+      "type": "paragraph",
+      "text": "- Excellent at creative writing & poetry"
+    },
+    {
+      "type": "paragraph",
+      "text": "- Reasoning model \u2014 produces thinking blocks, needs --jinja flag"
+    },
+    {
+      "type": "paragraph",
+      "text": "- Recommended for production use"
+    },
+    {
+      "type": "paragraph",
+      "text": "- MatFormer (E2B) model \u2014 chatml template fix applied (was gemma, +273%/+650%)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "#12 \u2014 granite3.2-2b"
     },
     {
       "type": "table",
@@ -2269,7 +2450,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -2370,20 +2551,23 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at coding and math tasks"
+      "text": "- Excellent at coding & math"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Fast generation (26.6 tok/s)"
+      "text": "- Fast generation (26.6 tok/s)"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Recommended for production use"
+      "text": "- Recommended for production use"
+    },
+    {
+      "type": "pagebreak"
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "#12 \u2014 granite4.2-3b"
+      "text": "#13 \u2014 granite4.2-3b"
     },
     {
       "type": "table",
@@ -2414,7 +2598,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -2515,15 +2699,12 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at coding and math tasks"
-    },
-    {
-      "type": "pagebreak"
+      "text": "- Excellent at coding & math"
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "#13 \u2014 qwen2.5-coder-3b"
+      "text": "#14 \u2014 qwen2.5-coder-3b"
     },
     {
       "type": "table",
@@ -2554,7 +2735,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -2655,12 +2836,15 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at coding and math tasks"
+      "text": "- Excellent at coding & math"
+    },
+    {
+      "type": "pagebreak"
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "#14 \u2014 granite4-3b"
+      "text": "#15 \u2014 granite4-3b"
     },
     {
       "type": "table",
@@ -2691,7 +2875,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -2792,15 +2976,12 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at coding and math tasks"
-    },
-    {
-      "type": "pagebreak"
+      "text": "- Excellent at coding & math"
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "#15 \u2014 stablelm-zephyr"
+      "text": "#16 \u2014 stablelm-zephyr"
     },
     {
       "type": "table",
@@ -2831,7 +3012,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -2932,16 +3113,19 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at coding and math tasks"
+      "text": "- Excellent at coding & math"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Fast generation (26.4 tok/s)"
+      "text": "- Fast generation (26.4 tok/s)"
+    },
+    {
+      "type": "pagebreak"
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "#16 \u2014 lfm2.5-2.6b"
+      "text": "#17 \u2014 lfm2.5-2.6b"
     },
     {
       "type": "table",
@@ -2972,7 +3156,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -3073,7 +3257,160 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at coding and math tasks"
+      "text": "- Excellent at coding & math"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "#18 \u2014 gemma4-e2b"
+    },
+    {
+      "type": "table",
+      "data": [
+        [
+          "Setting",
+          "Value"
+        ],
+        [
+          "File",
+          "gemma-4-E2B-it-Q4_K_M.gguf"
+        ],
+        [
+          "Chat Template",
+          "chatml"
+        ],
+        [
+          "Thinking Model",
+          "Yes (--jinja required)"
+        ],
+        [
+          "Best Temperature",
+          "0.7"
+        ],
+        [
+          "Top-K",
+          "40"
+        ],
+        [
+          "Context Window",
+          "2,048"
+        ],
+        [
+          "Max Tokens",
+          "2048"
+        ],
+        [
+          "Top-P",
+          "0.9"
+        ],
+        [
+          "Repeat Penalty",
+          "1.1"
+        ]
+      ],
+      "column_widths": [
+        120,
+        300
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Overall: 6.0/10 | Coding/Math: 9.2 | Creative/Poetry: 9.5 | Function Calls: 2.7 | Speed: 23.4 tok/s"
+    },
+    {
+      "type": "table",
+      "data": [
+        [
+          "Prompt",
+          "Score",
+          "Speed (t/s)"
+        ],
+        [
+          "Creative Writing - Short Story",
+          "10/10",
+          "24.2"
+        ],
+        [
+          "Function Call: Email Draft",
+          "9/10",
+          "23.0"
+        ],
+        [
+          "Function Call: Read File",
+          "2/10",
+          "22.8"
+        ],
+        [
+          "Function Call: SQLite Query",
+          "1/10",
+          "22.6"
+        ],
+        [
+          "Function Call: Terminal Command",
+          "2/10",
+          "23.5"
+        ],
+        [
+          "Function Call: Web Search",
+          "2/10",
+          "23.5"
+        ],
+        [
+          "Function Call: Write File",
+          "0/10",
+          "22.3"
+        ],
+        [
+          "HTML Web Browser Game",
+          "10/10",
+          "23.8"
+        ],
+        [
+          "HTML Profile Cards Page",
+          "9/10",
+          "23.8"
+        ],
+        [
+          "Iambic Pentameter Poem",
+          "9/10",
+          "23.2"
+        ],
+        [
+          "Mathematical Proof",
+          "8/10",
+          "23.8"
+        ],
+        [
+          "Python Data Processing",
+          "10/10",
+          "23.9"
+        ]
+      ],
+      "column_widths": [
+        250,
+        60,
+        80
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "- Excellent at coding & math"
+    },
+    {
+      "type": "paragraph",
+      "text": "- Excellent at creative writing & poetry"
+    },
+    {
+      "type": "paragraph",
+      "text": "- Struggles with function-call JSON \u2014 produces prose instead"
+    },
+    {
+      "type": "paragraph",
+      "text": "- Reasoning model \u2014 produces thinking blocks, needs --jinja flag"
+    },
+    {
+      "type": "paragraph",
+      "text": "- MatFormer (E2B) model \u2014 chatml template fix applied (was gemma, +273%/+650%)"
     },
     {
       "type": "pagebreak"
@@ -3081,7 +3418,7 @@
     {
       "type": "heading",
       "level": 2,
-      "text": "#17 \u2014 deepseek-r1-1.5b"
+      "text": "#19 \u2014 deepseek-r1-1.5b"
     },
     {
       "type": "table",
@@ -3100,7 +3437,7 @@
         ],
         [
           "Thinking Model",
-          "Yes (--jinja flag required)"
+          "Yes (--jinja required)"
         ],
         [
           "Best Temperature",
@@ -3112,7 +3449,7 @@
         ],
         [
           "Context Window",
-          "4096"
+          "4,096"
         ],
         [
           "Max Tokens",
@@ -3213,24 +3550,28 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Excellent at coding and math tasks"
+      "text": "- Excellent at coding & math"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Struggles with function-call JSON format \u2014 produces prose instead"
+      "text": "- Struggles with function-call JSON \u2014 produces prose instead"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Fast generation (32.7 tok/s)"
+      "text": "- Fast generation (32.7 tok/s)"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Reasoning model \u2014 produces thinking blocks before answers, needs --jinja flag"
+      "text": "- Reasoning model \u2014 produces thinking blocks, needs --jinja flag"
+    },
+    {
+      "type": "paragraph",
+      "text": "- DeepSeek R1 distill \u2014 chatml template fix applied (was deepseek, +43%/+158%)"
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "#18 \u2014 ministral-3b"
+      "text": "#20 \u2014 ministral-3b"
     },
     {
       "type": "table",
@@ -3261,7 +3602,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -3362,7 +3703,7 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Struggles with function-call JSON format \u2014 produces prose instead"
+      "text": "- Struggles with function-call JSON \u2014 produces prose instead"
     },
     {
       "type": "pagebreak"
@@ -3370,7 +3711,7 @@
     {
       "type": "heading",
       "level": 2,
-      "text": "#19 \u2014 gemma2-2b"
+      "text": "#21 \u2014 gemma2-2b"
     },
     {
       "type": "table",
@@ -3401,7 +3742,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -3503,7 +3844,7 @@
     {
       "type": "heading",
       "level": 2,
-      "text": "#20 \u2014 llama3.2-3b"
+      "text": "#22 \u2014 llama3.2-3b"
     },
     {
       "type": "table",
@@ -3534,7 +3875,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -3635,11 +3976,11 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Struggles with function-call JSON format \u2014 produces prose instead"
+      "text": "- Struggles with function-call JSON \u2014 produces prose instead"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Very poor overall \u2014 not recommended for production use"
+      "text": "- Very poor \u2014 not recommended for production use"
     },
     {
       "type": "pagebreak"
@@ -3647,7 +3988,7 @@
     {
       "type": "heading",
       "level": 2,
-      "text": "#21 \u2014 gemma3-1b"
+      "text": "#23 \u2014 gemma3-1b"
     },
     {
       "type": "table",
@@ -3678,7 +4019,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -3779,20 +4120,20 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Struggles with function-call JSON format \u2014 produces prose instead"
+      "text": "- Struggles with function-call JSON \u2014 produces prose instead"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Fast generation (31.5 tok/s)"
+      "text": "- Fast generation (31.5 tok/s)"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Very poor overall \u2014 not recommended for production use"
+      "text": "- Very poor \u2014 not recommended for production use"
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "#22 \u2014 phi3-3.8b"
+      "text": "#24 \u2014 phi3-3.8b"
     },
     {
       "type": "table",
@@ -3823,7 +4164,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -3924,11 +4265,11 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Struggles with function-call JSON format \u2014 produces prose instead"
+      "text": "- Struggles with function-call JSON \u2014 produces prose instead"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Very poor overall \u2014 not recommended for production use"
+      "text": "- Very poor \u2014 not recommended for production use"
     },
     {
       "type": "pagebreak"
@@ -3936,7 +4277,7 @@
     {
       "type": "heading",
       "level": 2,
-      "text": "#23 \u2014 llama3.2-1b"
+      "text": "#25 \u2014 llama3.2-1b"
     },
     {
       "type": "table",
@@ -3967,7 +4308,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -4068,20 +4409,20 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Struggles with function-call JSON format \u2014 produces prose instead"
+      "text": "- Struggles with function-call JSON \u2014 produces prose instead"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Fast generation (42.2 tok/s)"
+      "text": "- Fast generation (42.2 tok/s)"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Very poor overall \u2014 not recommended for production use"
+      "text": "- Very poor \u2014 not recommended for production use"
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "#24 \u2014 phi4-mini"
+      "text": "#26 \u2014 phi4-mini"
     },
     {
       "type": "table",
@@ -4100,7 +4441,7 @@
         ],
         [
           "Thinking Model",
-          "Yes (--jinja flag required)"
+          "Yes (--jinja required)"
         ],
         [
           "Best Temperature",
@@ -4112,7 +4453,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -4213,15 +4554,15 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Struggles with function-call JSON format \u2014 produces prose instead"
+      "text": "- Struggles with function-call JSON \u2014 produces prose instead"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Reasoning model \u2014 produces thinking blocks before answers, needs --jinja flag"
+      "text": "- Reasoning model \u2014 produces thinking blocks, needs --jinja flag"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Very poor overall \u2014 not recommended for production use"
+      "text": "- Very poor \u2014 not recommended for production use"
     },
     {
       "type": "pagebreak"
@@ -4229,152 +4570,7 @@
     {
       "type": "heading",
       "level": 2,
-      "text": "#25 \u2014 gemma3n-e2b"
-    },
-    {
-      "type": "table",
-      "data": [
-        [
-          "Setting",
-          "Value"
-        ],
-        [
-          "File",
-          "gemma-3n-E2B-it-Q4_K_M.gguf"
-        ],
-        [
-          "Chat Template",
-          "gemma"
-        ],
-        [
-          "Thinking Model",
-          "Yes (--jinja flag required)"
-        ],
-        [
-          "Best Temperature",
-          "0.7"
-        ],
-        [
-          "Top-K",
-          "40"
-        ],
-        [
-          "Context Window",
-          "2048"
-        ],
-        [
-          "Max Tokens",
-          "2048"
-        ],
-        [
-          "Top-P",
-          "0.9"
-        ],
-        [
-          "Repeat Penalty",
-          "1.1"
-        ]
-      ],
-      "column_widths": [
-        120,
-        300
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "Overall: 2.2/10 | Coding/Math: 1.5 | Creative/Poetry: 3.5 | Function Calls: 2.3 | Speed: 21.1 tok/s"
-    },
-    {
-      "type": "table",
-      "data": [
-        [
-          "Prompt",
-          "Score",
-          "Speed (t/s)"
-        ],
-        [
-          "Creative Writing - Short Story",
-          "4/10",
-          "21.2"
-        ],
-        [
-          "Function Call: Email Draft",
-          "2/10",
-          "21.3"
-        ],
-        [
-          "Function Call: Read File",
-          "2/10",
-          "21.4"
-        ],
-        [
-          "Function Call: SQLite Query",
-          "2/10",
-          "21.2"
-        ],
-        [
-          "Function Call: Terminal Command",
-          "2/10",
-          "21.2"
-        ],
-        [
-          "Function Call: Web Search",
-          "4/10",
-          "21.5"
-        ],
-        [
-          "Function Call: Write File",
-          "2/10",
-          "21.2"
-        ],
-        [
-          "HTML Web Browser Game",
-          "0/10",
-          "21.3"
-        ],
-        [
-          "HTML Profile Cards Page",
-          "0/10",
-          "19.1"
-        ],
-        [
-          "Iambic Pentameter Poem",
-          "3/10",
-          "21.3"
-        ],
-        [
-          "Mathematical Proof",
-          "1/10",
-          "21.2"
-        ],
-        [
-          "Python Data Processing",
-          "5/10",
-          "21.5"
-        ]
-      ],
-      "column_widths": [
-        250,
-        60,
-        80
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "\u2022 Struggles with function-call JSON format \u2014 produces prose instead"
-    },
-    {
-      "type": "paragraph",
-      "text": "\u2022 Reasoning model \u2014 produces thinking blocks before answers, needs --jinja flag"
-    },
-    {
-      "type": "paragraph",
-      "text": "\u2022 Very poor overall \u2014 not recommended for production use"
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "text": "#26 \u2014 llama3.2-3b-new"
+      "text": "#27 \u2014 llama3.2-3b-new"
     },
     {
       "type": "table",
@@ -4405,7 +4601,7 @@
         ],
         [
           "Context Window",
-          "8192"
+          "8,192"
         ],
         [
           "Max Tokens",
@@ -4506,159 +4702,11 @@
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Struggles with function-call JSON format \u2014 produces prose instead"
+      "text": "- Struggles with function-call JSON \u2014 produces prose instead"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Very poor overall \u2014 not recommended for production use"
-    },
-    {
-      "type": "pagebreak"
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "text": "#27 \u2014 gemma4-e2b"
-    },
-    {
-      "type": "table",
-      "data": [
-        [
-          "Setting",
-          "Value"
-        ],
-        [
-          "File",
-          "gemma-4-E2B-it-Q4_K_M.gguf"
-        ],
-        [
-          "Chat Template",
-          "gemma"
-        ],
-        [
-          "Thinking Model",
-          "Yes (--jinja flag required)"
-        ],
-        [
-          "Best Temperature",
-          "0.5"
-        ],
-        [
-          "Top-K",
-          "40"
-        ],
-        [
-          "Context Window",
-          "2048"
-        ],
-        [
-          "Max Tokens",
-          "2048"
-        ],
-        [
-          "Top-P",
-          "0.9"
-        ],
-        [
-          "Repeat Penalty",
-          "1.1"
-        ]
-      ],
-      "column_widths": [
-        120,
-        300
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "Overall: 1.2/10 | Coding/Math: 0.0 | Creative/Poetry: 3.5 | Function Calls: 1.3 | Speed: 19.8 tok/s"
-    },
-    {
-      "type": "table",
-      "data": [
-        [
-          "Prompt",
-          "Score",
-          "Speed (t/s)"
-        ],
-        [
-          "Creative Writing - Short Story",
-          "1/10",
-          "19.5"
-        ],
-        [
-          "Function Call: Email Draft",
-          "3/10",
-          "20.2"
-        ],
-        [
-          "Function Call: Read File",
-          "1/10",
-          "20.3"
-        ],
-        [
-          "Function Call: SQLite Query",
-          "1/10",
-          "20.1"
-        ],
-        [
-          "Function Call: Terminal Command",
-          "1/10",
-          "20.1"
-        ],
-        [
-          "Function Call: Web Search",
-          "1/10",
-          "20.5"
-        ],
-        [
-          "Function Call: Write File",
-          "1/10",
-          "20.3"
-        ],
-        [
-          "HTML Web Browser Game",
-          "0/10",
-          "20.0"
-        ],
-        [
-          "HTML Profile Cards Page",
-          "0/10",
-          "18.7"
-        ],
-        [
-          "Iambic Pentameter Poem",
-          "6/10",
-          "20.1"
-        ],
-        [
-          "Mathematical Proof",
-          "0/10",
-          "19.3"
-        ],
-        [
-          "Python Data Processing",
-          "0/10",
-          "18.7"
-        ]
-      ],
-      "column_widths": [
-        250,
-        60,
-        80
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "\u2022 Struggles with function-call JSON format \u2014 produces prose instead"
-    },
-    {
-      "type": "paragraph",
-      "text": "\u2022 Reasoning model \u2014 produces thinking blocks before answers, needs --jinja flag"
-    },
-    {
-      "type": "paragraph",
-      "text": "\u2022 Very poor overall \u2014 not recommended for production use"
+      "text": "- Very poor \u2014 not recommended for production use"
     },
     {
       "type": "pagebreak"
@@ -4666,12 +4714,16 @@
     {
       "type": "heading",
       "level": 1,
-      "text": "7. Category Analysis"
+      "text": "7. Category Analysis \u2014 Who Shines Where"
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Coding & Math \u2014 Best Models"
+      "text": "Coding & Math"
+    },
+    {
+      "type": "paragraph",
+      "text": "Structured generation \u2014 Python functions, HTML pages, math proofs. This is where most models do their best work."
     },
     {
       "type": "table",
@@ -4679,8 +4731,8 @@
         [
           "Rank",
           "Model",
-          "Code/Math",
-          "Speed",
+          "Coding",
+          "Speed (t/s)",
           "Temp",
           "Think"
         ],
@@ -4777,7 +4829,11 @@
     {
       "type": "heading",
       "level": 2,
-      "text": "Creative & Poetry \u2014 Best Models"
+      "text": "Creative & Poetry"
+    },
+    {
+      "type": "paragraph",
+      "text": "Linguistic artistry \u2014 iambic pentameter, short stories, imaginative prose. The hardest category to score high."
     },
     {
       "type": "table",
@@ -4786,7 +4842,7 @@
           "Rank",
           "Model",
           "Creative",
-          "Speed",
+          "Speed (t/s)",
           "Temp",
           "Think"
         ],
@@ -4800,6 +4856,22 @@
         ],
         [
           "2",
+          "gemma3n-e2b",
+          "9.5",
+          "21.5",
+          "0.7",
+          "yes"
+        ],
+        [
+          "3",
+          "gemma4-e2b",
+          "9.5",
+          "23.4",
+          "0.7",
+          "yes"
+        ],
+        [
+          "4",
           "hermes3-3b-q5",
           "9.0",
           "19.4",
@@ -4807,7 +4879,7 @@
           "no"
         ],
         [
-          "3",
+          "5",
           "qwen3.5-2b",
           "9.0",
           "24.9",
@@ -4815,7 +4887,7 @@
           "yes"
         ],
         [
-          "4",
+          "6",
           "qwen2.5-3b",
           "8.5",
           "20.1",
@@ -4823,7 +4895,7 @@
           "no"
         ],
         [
-          "5",
+          "7",
           "granite4.1-3b",
           "8.5",
           "18.9",
@@ -4831,7 +4903,7 @@
           "no"
         ],
         [
-          "6",
+          "8",
           "qwen2.5-coder-3b",
           "8.5",
           "20.0",
@@ -4839,7 +4911,7 @@
           "no"
         ],
         [
-          "7",
+          "9",
           "stablelm-zephyr",
           "8.0",
           "26.4",
@@ -4847,34 +4919,18 @@
           "no"
         ],
         [
-          "8",
+          "10",
           "deepseek-r1-7b",
           "7.0",
           "9.7",
           "0.0",
           "yes"
-        ],
-        [
-          "9",
-          "smollm3",
-          "7.0",
-          "20.8",
-          "1.0",
-          "no"
-        ],
-        [
-          "10",
-          "granite3.2-2b",
-          "7.0",
-          "26.6",
-          "0.3",
-          "no"
         ]
       ],
       "column_widths": [
         30,
         120,
-        50,
+        60,
         50,
         40,
         40
@@ -4883,7 +4939,11 @@
     {
       "type": "heading",
       "level": 2,
-      "text": "Function Calls \u2014 Best Models"
+      "text": "Function Calls"
+    },
+    {
+      "type": "paragraph",
+      "text": "Structured tool-use JSON \u2014 terminal commands, file operations, SQLite queries, email drafts. The weakest category across the board."
     },
     {
       "type": "table",
@@ -4891,8 +4951,8 @@
         [
           "Rank",
           "Model",
-          "Func Calls",
-          "Speed",
+          "Function",
+          "Speed (t/s)",
           "Temp",
           "Think"
         ],
@@ -4980,7 +5040,7 @@
       "column_widths": [
         30,
         120,
-        55,
+        60,
         50,
         40,
         40
@@ -4992,61 +5052,65 @@
     {
       "type": "heading",
       "level": 1,
-      "text": "8. How We Built the Transmission Service"
+      "text": "8. Building the Transmission \u2014 From Data to Service"
+    },
+    {
+      "type": "paragraph",
+      "text": "All that benchmark data is great, but what do you actually do with 2,916 scored rows? You build a service that puts them to work. That's the LLM Transmission 8GB \u2014 a prompt router that classifies what you're asking, shows you the best models for that type of task, and runs your prompt with the selected model's optimal settings."
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Overview"
+      "text": "The Architecture"
     },
     {
       "type": "paragraph",
-      "text": "The LLM Transmission 8GB service is a local-first prompt routing system. It classifies incoming prompts, presents the top 6 model options to the operator, then runs the prompt with the selected model using its benchmark-optimized settings. The goal: handle as many tasks as possible on free local LLMs, minimizing cloud token usage."
+      "text": "The pipeline is beautifully simple: Prompt arrives -> Classifier matches keywords in <1ms (no LLM needed!) -> Routing table presents top 6 models for the detected category -> Operator picks one (or accepts #1) -> llama-cli runs with that model's locked-best temp and k=40 -> Output is cleaned and returned with stats. Zero cloud tokens."
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Step 1: Benchmark Data Collection"
+      "text": "Step 1: Collect the Data"
     },
     {
       "type": "paragraph",
-      "text": "We tested 27 models from the jetson-model-zoo project. Each model ran a suite of 12 prompts spanning 6 categories (HTML, Python, Math, Poetry, Creative Writing, Function Calls). We swept temperature across 7 values and top_k across 3 values, producing 2,916 total scored rows. All scores were recorded in a CSV and used to determine the best parameter combination for each model."
+      "text": "27 models, 12 prompts, 7 temperatures, 3 top_k values. Every run scored 0-10. The result: a CSV with 2,916 rows that tells us exactly which model is best at what, and what settings to use."
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Step 2: Parameter Optimization (One Variable at a Time)"
+      "text": "Step 2: Lock the Best Parameters"
     },
     {
       "type": "paragraph",
-      "text": "Following the principle 'quality before speed,' we optimized one parameter at a time:\n\n1. Temperature sweep: 7 values (0.0-1.0), all models, all prompts. Best temp locked per model.\n2. Top-K sweep: 3 values (20, 40, 64) at locked temps. k=40 confirmed optimal for 70% of models.\n3. Template verification: Discovered DeepSeek R1 distills need chatml, not deepseek. Fixed and re-benchmarked.\n\nNext planned sweep: top_p (not yet conducted as of this report)."
+      "text": "For each model, we locked the best temperature (the one that produced the highest average score). Then we confirmed k=40 as the universal top_k. Then we discovered and fixed the two template bugs. Each step was one variable at a time, quality before speed."
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Step 3: Prompt Classification"
+      "text": "Step 3: Classify Without an LLM"
     },
     {
       "type": "paragraph",
-      "text": "The classifier uses keyword matching and heuristics \u2014 no LLM is needed for classification itself, making it instant (<1ms). It scores each prompt against keyword indices for 4 categories:\n\n\u2022 coding_math: Python, HTML, math proofs (keywords: python, def, html, flexbox, prove, proof)\n\u2022 creative_poetry: Creative writing, poetry (keywords: poem, iambic, pentameter, story, fiction)\n\u2022 function_calls: Tool-use format (keywords: terminal, sqlite, email, web search, read file)\n\u2022 general_purpose: Fallback for questions and explanations\n\nThe classifier also applies heuristic boosts (e.g., 'write a function' without a language name still triggers coding_math)."
+      "text": "The classifier uses pure Python keyword matching and heuristics \u2014 it runs in under 1 millisecond with zero model loading. It scores the prompt against keyword indices for 4 categories: coding_math (python, html, prove), creative_poetry (poem, iambic, story), function_calls (terminal, sqlite, email), and general_purpose (what, how, explain). Heuristic boosts catch edge cases like 'write a function' without a language name."
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Step 4: Routing Table Construction"
+      "text": "Step 4: Build the Routing Table"
     },
     {
       "type": "paragraph",
-      "text": "For each category, the top 6 models were selected from the benchmark data, ranked by their group-average quality score. Each model entry in the routing table includes:\n\n\u2022 Quality score (group-specific average, 1-10 scale)\n\u2022 Generation speed (tokens/second)\n\u2022 Model file size (GB)\n\u2022 Chat template (chatml, gemma, etc.)\n\u2022 Thinking flag (requires --jinja)\n\u2022 Best temperature (locked from sweep)\n\u2022 Top-K (locked at 40)\n\u2022 Model file path"
+      "text": "For each category, we ranked all 27 models by their group-average quality score and took the top 6. Each entry carries everything the service needs: quality, speed, file size, chat template, thinking flag, best temperature, top_k, and model file path."
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Step 5: Operator Presentation and Execution"
+      "text": "Step 5: Present and Execute"
     },
     {
       "type": "paragraph",
-      "text": "When a prompt is submitted, the service:\n\n1. Classifies the prompt (<1ms)\n2. Presents the top 6 models with quality, speed, size, thinking flag, and a Q\u00d7S (quality \u00d7 speed) metric\n3. Operator selects a model (or accepts #1 default)\n4. Builds and executes a llama-cli command with the model's best settings\n5. Cleans the output (removes banner, spinner characters, stats)\n6. Reports results: model used, category, time, tokens generated, cloud tokens saved"
+      "text": "When a prompt arrives, the service classifies it, shows the operator a clean table of 6 options with quality, speed, size, thinking flag, and a QxS balance metric, runs the chosen model, cleans the output, and reports how many tokens were generated \u2014 and the satisfying fact that zero cloud tokens were spent."
     },
     {
       "type": "pagebreak"
@@ -5080,62 +5144,62 @@
         ],
         [
           "1",
-          "LFM 2.5 2.6B",
+          "DeepSeek R1 7B",
           "10.0",
-          "23.8",
-          "1.6G",
-          "no",
-          "0.2",
+          "9.7 t/s",
+          "3.0G",
+          "yes",
+          "0.0",
           "40"
         ],
         [
           "2",
-          "Hermes 3 3B Q5",
-          "9.8",
-          "19.4",
-          "2.3G",
+          "LFM 2.5 2.6B",
+          "10.0",
+          "23.8 t/s",
+          "1.7G",
           "no",
-          "0.3",
+          "0.2",
           "40"
         ],
         [
           "3",
           "Hermes 3 3B Q4",
           "9.8",
-          "19.7",
-          "1.9G",
+          "19.7 t/s",
+          "2.0G",
           "no",
           "0.7",
           "40"
         ],
         [
           "4",
-          "Qwen 3.5 2B",
+          "Hermes 3 3B Q5",
           "9.8",
-          "24.9",
-          "1.4G",
-          "yes",
-          "0.1",
+          "19.4 t/s",
+          "2.3G",
+          "no",
+          "0.3",
           "40"
         ],
         [
           "5",
-          "Granite 3.2 2B",
-          "9.5",
-          "26.6",
-          "1.4G",
+          "Qwen 3 1.7B",
+          "9.8",
+          "30.8 t/s",
+          "1.3G",
           "no",
-          "0.3",
+          "1.0",
           "40"
         ],
         [
           "6",
-          "Qwen 2.5 3B",
-          "9.0",
-          "20.1",
-          "1.8G",
-          "no",
-          "0.3",
+          "Qwen 3.5 2B",
+          "9.8",
+          "24.9 t/s",
+          "1.4G",
+          "yes",
+          "0.1",
           "40"
         ]
       ],
@@ -5143,8 +5207,8 @@
         25,
         130,
         45,
+        45,
         40,
-        35,
         35,
         35,
         25
@@ -5174,62 +5238,62 @@
         ],
         [
           "1",
+          "Gemma 3n E2B",
+          "9.5",
+          "21.5 t/s",
+          "3.0G",
+          "yes",
+          "0.7",
+          "40"
+        ],
+        [
+          "2",
+          "Gemma 4 E2B",
+          "9.5",
+          "23.4 t/s",
+          "3.1G",
+          "yes",
+          "0.7",
+          "40"
+        ],
+        [
+          "3",
           "Ministral 3B Reasoning",
           "9.5",
-          "18.7",
+          "18.7 t/s",
           "2.1G",
           "yes",
           "0.3",
           "40"
         ],
         [
-          "2",
+          "4",
           "Hermes 3 3B Q5",
           "9.0",
-          "19.4",
+          "19.4 t/s",
           "2.3G",
           "no",
           "0.3",
           "40"
         ],
         [
-          "3",
+          "5",
           "Qwen 3.5 2B",
           "9.0",
-          "24.9",
+          "24.9 t/s",
           "1.4G",
           "yes",
           "0.1",
           "40"
         ],
         [
-          "4",
+          "6",
           "Granite 4.1 3B",
           "8.5",
-          "18.9",
-          "2.0G",
+          "18.9 t/s",
+          "2.1G",
           "no",
           "1.0",
-          "40"
-        ],
-        [
-          "5",
-          "Qwen 2.5 3B",
-          "8.5",
-          "20.1",
-          "1.8G",
-          "no",
-          "0.3",
-          "40"
-        ],
-        [
-          "6",
-          "StableLM Zephyr",
-          "8.0",
-          "26.4",
-          "1.5G",
-          "no",
-          "0.3",
           "40"
         ]
       ],
@@ -5237,8 +5301,8 @@
         25,
         130,
         45,
+        45,
         40,
-        35,
         35,
         35,
         25
@@ -5270,60 +5334,60 @@
           "1",
           "SmallThinker 3B",
           "7.7",
-          "20.1",
-          "1.8G",
+          "20.1 t/s",
+          "2.1G",
           "yes",
           "0.3",
           "40"
         ],
         [
           "2",
-          "Hermes 3 3B Q5",
-          "6.2",
-          "19.4",
-          "2.3G",
-          "no",
-          "0.3",
-          "40"
-        ],
-        [
-          "3",
-          "Hermes 3 3B Q4",
-          "6.3",
-          "19.7",
-          "1.9G",
-          "no",
-          "0.7",
-          "40"
-        ],
-        [
-          "4",
-          "Qwen 3 1.7B",
-          "6.0",
-          "30.8",
-          "1.2G",
-          "no",
-          "1.0",
-          "40"
-        ],
-        [
-          "5",
           "DeepSeek R1 7B",
           "6.3",
-          "9.7",
+          "9.7 t/s",
           "3.0G",
           "yes",
           "0.0",
           "40"
         ],
         [
-          "6",
-          "Qwen 2.5 3B",
+          "3",
+          "Hermes 3 3B Q4",
+          "6.3",
+          "19.7 t/s",
+          "2.0G",
+          "no",
+          "0.7",
+          "40"
+        ],
+        [
+          "4",
+          "Hermes 3 3B Q5",
           "6.2",
-          "20.1",
-          "1.8G",
+          "19.4 t/s",
+          "2.3G",
           "no",
           "0.3",
+          "40"
+        ],
+        [
+          "5",
+          "Qwen 2.5 3B",
+          "6.2",
+          "20.1 t/s",
+          "1.9G",
+          "no",
+          "0.3",
+          "40"
+        ],
+        [
+          "6",
+          "Qwen 3 1.7B",
+          "6.0",
+          "30.8 t/s",
+          "1.3G",
+          "no",
+          "1.0",
           "40"
         ]
       ],
@@ -5331,8 +5395,8 @@
         25,
         130,
         45,
+        45,
         40,
-        35,
         35,
         35,
         25
@@ -5364,7 +5428,7 @@
           "1",
           "Hermes 3 3B Q5",
           "7.8",
-          "19.4",
+          "19.4 t/s",
           "2.3G",
           "no",
           "0.3",
@@ -5372,52 +5436,52 @@
         ],
         [
           "2",
+          "SmallThinker 3B",
+          "7.6",
+          "20.1 t/s",
+          "2.1G",
+          "yes",
+          "0.3",
+          "40"
+        ],
+        [
+          "3",
           "DeepSeek R1 7B",
           "7.5",
-          "9.7",
+          "9.7 t/s",
           "3.0G",
           "yes",
           "0.0",
           "40"
         ],
         [
-          "3",
-          "SmallThinker 3B",
-          "7.6",
-          "20.1",
-          "1.8G",
-          "yes",
-          "0.3",
+          "4",
+          "Hermes 3 3B Q4",
+          "7.5",
+          "19.7 t/s",
+          "2.0G",
+          "no",
+          "0.7",
           "40"
         ],
         [
-          "4",
+          "5",
           "Qwen 2.5 3B",
           "7.5",
-          "20.1",
-          "1.8G",
+          "20.1 t/s",
+          "1.9G",
           "no",
           "0.3",
           "40"
         ],
         [
-          "5",
+          "6",
           "Qwen 3.5 2B",
           "7.5",
-          "24.9",
+          "24.9 t/s",
           "1.4G",
           "yes",
           "0.1",
-          "40"
-        ],
-        [
-          "6",
-          "Ministral 3B Reasoning",
-          "7.2",
-          "18.7",
-          "2.1G",
-          "yes",
-          "0.3",
           "40"
         ]
       ],
@@ -5425,8 +5489,8 @@
         25,
         130,
         45,
+        45,
         40,
-        35,
         35,
         35,
         25
@@ -5438,85 +5502,97 @@
     {
       "type": "heading",
       "level": 1,
-      "text": "10. Conclusions and Next Steps"
+      "text": "10. What We Learned and Where We're Going"
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Key Findings"
+      "text": "The Big Takeaways"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 hermes3-3b-q5 is the overall champion (7.8/10) \u2014 strong across all categories, the best general-purpose model."
+      "text": "- hermes3-3b-q5 is the overall champion (7.8/10) \u2014 versatile, strong everywhere, the best general-purpose model."
     },
     {
       "type": "paragraph",
-      "text": "\u2022 lfm2.5-2.6b achieves perfect coding & math scores (10.0/10) at 23.8 tok/s \u2014 the best coding specialist."
+      "text": "- lfm2.5-2.6b achieves perfect coding & math (10.0/10) at 23.8 tok/s \u2014 the coding specialist."
     },
     {
       "type": "paragraph",
-      "text": "\u2022 ministral-3b-reasoning is the best creative writer (9.5/10) but slow at 18.7 tok/s."
+      "text": "- gemma3n-e2b rose from 1.9 to 7.1 after the chatml fix \u2014 a 273% improvement that shows how crucial templates are."
     },
     {
       "type": "paragraph",
-      "text": "\u2022 smallthinker-3b is the best function caller (7.7/10) \u2014 the only model that reliably produces valid tool-call JSON."
+      "text": "- gemma4-e2b rose from 0.8 to 6.0 \u2014 a 650% improvement from the same one-line fix."
     },
     {
       "type": "paragraph",
-      "text": "\u2022 DeepSeek R1 distills need chatml template, not deepseek \u2014 using the wrong template caused 43-158% score degradation."
+      "text": "- ministral-3b-reasoning is the best creative writer (9.5/10) \u2014 the only model to score perfect 10 on iambic pentameter."
     },
     {
       "type": "paragraph",
-      "text": "\u2022 k=40 is the universal optimal top_k (70% of models) \u2014 safe default for the routing table."
+      "text": "- smallthinker-3b is the best function caller (7.7/10) \u2014 the only model that reliably produces valid tool-call JSON."
     },
     {
       "type": "paragraph",
-      "text": "\u2022 No single temperature works for all models \u2014 7 peak at 0.3, 7 at 1.0. Per-model locked temps are essential."
+      "text": "- DeepSeek R1 7B is now #1 for coding (10.0, tied with LFM) after the chatml template fix \u2014 a 158% improvement."
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Function calls are the hardest category \u2014 no model scores above 7.7/10. Most models produce prose instead of structured JSON."
+      "text": "- k=40 is the universal optimal top_k (78% of models) \u2014 one setting that works for almost everyone."
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Models under 2B parameters (gemma3-1b, llama3.2-1b, phi3-3.8b) score below 3.0/10 \u2014 not suitable for production use."
+      "text": "- No single temperature works \u2014 per-model locked temps are essential. 7 peak at 0.3, 7 at 1.0."
     },
     {
       "type": "paragraph",
-      "text": "\u2022 The Q\u00d7S metric (quality \u00d7 speed / 10) helps operators balance quality vs speed when selecting a model."
+      "text": "- Function calls remain the hardest category \u2014 no model above 7.7/10. Most produce prose, not JSON."
+    },
+    {
+      "type": "paragraph",
+      "text": "- Models under 2B parameters (gemma3-1b, llama3.2-1b, phi3-3.8b) score below 3.0 \u2014 not production-ready."
+    },
+    {
+      "type": "paragraph",
+      "text": "- A model's name does not determine its chat template. DeepSeek uses chatml. E2B uses chatml. Always verify."
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Next Steps"
+      "text": "What's Next"
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Top-P sweep: Test top_p values (0.8, 0.85, 0.9, 0.95, 1.0) at locked temps and k=40."
+      "text": "- Top-P sweep: Test top_p values (0.8, 0.85, 0.9, 0.95, 1.0) at locked temps and k=40."
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Repeat penalty sweep: Test values 1.0, 1.05, 1.1, 1.15, 1.2 to find optimal per-model settings."
+      "text": "- Repeat penalty sweep: Test 1.0, 1.05, 1.1, 1.15, 1.2 for per-model optimization."
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Context window optimization: Test 8K vs 16K vs 32K context to find the sweet spot for 8GB VRAM."
+      "text": "- Context window tuning: Find the sweet spot between 8K, 16K, and 32K for 8GB VRAM."
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Function-call fine-tuning: Most models struggle with tool-call JSON \u2014 explore system prompts or fine-tuning."
+      "text": "- Function-call improvement: Explore system prompts or fine-tuning to help models produce better JSON."
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Add more models: Test new releases as they become available (e.g., Qwen 3.5, Granite 5)."
+      "text": "- New model testing: Add new releases as they arrive (Qwen 3.5, Granite 5, etc.)."
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Web interface: Add a Flask web UI for non-CLI usage."
+      "text": "- Web interface: A Flask UI for non-CLI usage."
     },
     {
       "type": "paragraph",
-      "text": "\u2022 Auto-routing mode: When operator doesn't want to choose, auto-select #1 based on quality score."
+      "text": "- Auto-routing mode: Skip operator selection, auto-pick #1 based on quality score."
+    },
+    {
+      "type": "paragraph",
+      "text": "The beauty of this project is that every finding is backed by real data \u2014 2,916 scored runs on actual hardware. No speculation, no hand-waving. Just models, prompts, and the numbers they produced. And now, all of that knowledge lives inside a routing service that puts it to work every time you submit a prompt."
     }
   ]
 }
