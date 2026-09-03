@@ -13,6 +13,7 @@
 ![Categories](https://img.shields.io/badge/categories-4-purple.svg)
 ![Top Models](https://img.shields.io/badge/top%20models-6%20per%20category-ff69b4.svg)
 ![DeepSeek Fix](https://img.shields.io/badge/DeepSeek-chatml%20fix-yellow.svg)
+![E2B Fix](https://img.shields.io/badge/E2B-chatml%20fix-yellow.svg)
 ![k=40](https://img.shields.io/badge/top_k-40%20optimal-blueviolet.svg)
 ![Champion](https://img.shields.io/badge/champion-hermes3--3b--q5%20(7.8)--gold.svg)
 ![Report](https://img.shields.io/badge/findings%20report-25%20page%20PDF-success.svg)
@@ -28,7 +29,7 @@ A local LLM routing service for the NVIDIA Jetson Nano 8GB. Classifies incoming 
 3. [Full Leaderboard](#full-leaderboard--all-27-models)
 4. [Temperature Sweep Results](#temperature-sweep-results)
 5. [Top-K Sweep Results](#top-k-sweep-results)
-6. [DeepSeek Template Discovery](#deepseek-template-discovery)
+6. [Chat Template Fixes](#chat-template-fixes--deepseek--e2b)
 7. [Category Analysis](#category-analysis)
 8. [Per-Model Ideal Settings](#per-model-ideal-settings--all-27-models)
 9. [How the Transmission Works](#how-the-transmission-works)
@@ -54,11 +55,14 @@ The end goal: keep cloud token use to a minimum by handling as many tasks as pos
 
 - **hermes3-3b-q5** is the overall champion (7.8/10 at t=0.3, k=40) — strong across all categories
 - **lfm2.5-2.6b** achieves perfect coding & math scores (10.0/10) at 23.8 tok/s
+- **gemma3n-e2b** jumped from 1.9 to **7.1** after chatml template fix — excellent creative (9.5) and coding (9.2)
+- **gemma4-e2b** jumped from 0.8 to **6.0** after chatml template fix — strong coding (9.2) and creative (9.5)
 - **ministral-3b-reasoning** is the best creative writer (9.5/10) but slow at 18.7 tok/s
 - **smallthinker-3b** is the best function caller (7.7/10) — the only model that reliably produces valid tool-call JSON
 - **k=40** is the universal optimal top_k — wins 21/27 models (78%)
 - **No single temperature works** — 7 models peak at t=0.3, 7 at t=1.0. Per-model locked temps are essential
-- **DeepSeek R1 distills need chatml template**, not deepseek — using the wrong template caused 43-158% score degradation
+- **DeepSeek R1 distills need chatml template**, not deepseek — 43-158% score degradation with wrong template
+- **E2B (MatFormer) models need chatml template**, not gemma — 273-650% score degradation with wrong template
 - **Function calls are the hardest category** — no model scores above 7.7/10; most produce prose instead of structured JSON
 - **Models under 2B parameters** (gemma3-1b, llama3.2-1b, phi3-3.8b) score below 3.0/10 — not suitable for production use
 
@@ -80,23 +84,23 @@ Overall score = average across all 12 prompts at each model's best temperature w
 | 8 | ministral-3b-reasoning | 7.2 | 9.5 | 9.5 | 5.0 | 18.7 | 0.3 | 40 | chatml | ✅ |
 | 9 | qwen3-1.7b | 7.2 | 9.8 | 5.5 | 6.0 | 30.8 | 1.0 | 40 | chatml | — |
 | 10 | smollm3 | 7.2 | 9.2 | 7.0 | 5.8 | 20.8 | 1.0 | 40 | chatml | — |
-| 11 | granite3.2-2b | 7.0 | 9.5 | 7.0 | 5.3 | 26.6 | 0.3 | 40 | chatml | — |
-| 12 | granite4.2-3b | 6.9 | 9.5 | 6.5 | 5.3 | 18.9 | 1.0 | 40 | chatml | — |
-| 13 | qwen2.5-coder-3b | 6.9 | 9.5 | 8.5 | 4.7 | 20.0 | 0.1 | 40 | chatml | — |
-| 14 | granite4-3b | 6.8 | 9.5 | 6.5 | 5.0 | 18.9 | 0.7 | 40 | chatml | — |
-| 15 | stablelm-zephyr | 6.8 | 9.8 | 8.0 | 4.3 | 26.4 | 0.3 | 40 | chatml | — |
-| 16 | lfm2.5-2.6b | 6.6 | 10.0 | 5.5 | 4.7 | 23.8 | 0.2 | 40 | chatml | — |
-| 17 | deepseek-r1-1.5b | 5.3 | 9.2 | 4.5 | 3.0 | 32.7 | 0.0 | 40 | chatml | ✅ |
-| 18 | ministral-3b | 4.9 | 7.2 | 5.5 | 3.2 | 24.7 | 0.5 | 40 | chatml | — |
-| 19 | gemma2-2b | 4.5 | 2.8 | 4.0 | 5.8 | 22.3 | 0.1 | 40 | gemma | — |
-| 20 | llama3.2-3b | 2.8 | 1.8 | 5.0 | 2.7 | 19.7 | 1.0 | 40 | llama3 | — |
-| 21 | gemma3-1b | 2.7 | 2.2 | 3.5 | 2.7 | 31.5 | 1.0 | 40 | gemma | — |
-| 22 | phi3-3.8b | 2.5 | 2.2 | 4.0 | 2.2 | 17.7 | 0.2 | 40 | phi3 | — |
-| 23 | llama3.2-1b | 2.4 | 1.2 | 4.5 | 2.5 | 42.2 | 0.3 | 40 | llama3 | — |
-| 24 | phi4-mini | 2.3 | 2.5 | 3.0 | 2.0 | 16.8 | 1.0 | 40 | phi3 | ✅ |
-| 25 | gemma3n-e2b | 2.2 | 1.5 | 3.5 | 2.3 | 21.1 | 0.7 | 40 | gemma | ✅ |
-| 26 | llama3.2-3b-new | 2.2 | 1.5 | 3.5 | 2.2 | 19.7 | 0.0 | 40 | llama3 | — |
-| 27 | gemma4-e2b | 1.2 | 0.0 | 3.5 | 1.3 | 19.8 | 0.5 | 40 | gemma | ✅ |
+| 11 | gemma3n-e2b | 7.1 | 9.2 | 9.5 | 4.8 | 21.5 | 0.7 | 40 | chatml | ✅ |
+| 12 | granite3.2-2b | 7.0 | 9.5 | 7.0 | 5.3 | 26.6 | 0.3 | 40 | chatml | — |
+| 13 | granite4.2-3b | 6.9 | 9.5 | 6.5 | 5.3 | 18.9 | 1.0 | 40 | chatml | — |
+| 14 | qwen2.5-coder-3b | 6.9 | 9.5 | 8.5 | 4.7 | 20.0 | 0.1 | 40 | chatml | — |
+| 15 | granite4-3b | 6.8 | 9.5 | 6.5 | 5.0 | 18.9 | 0.7 | 40 | chatml | — |
+| 16 | stablelm-zephyr | 6.8 | 9.8 | 8.0 | 4.3 | 26.4 | 0.3 | 40 | chatml | — |
+| 17 | lfm2.5-2.6b | 6.6 | 10.0 | 5.5 | 4.7 | 23.8 | 0.2 | 40 | chatml | — |
+| 18 | gemma4-e2b | 6.0 | 9.2 | 9.5 | 2.7 | 23.4 | 0.7 | 40 | chatml | ✅ |
+| 19 | deepseek-r1-1.5b | 5.3 | 9.2 | 4.5 | 3.0 | 32.7 | 0.0 | 40 | chatml | ✅ |
+| 20 | ministral-3b | 4.9 | 7.2 | 5.5 | 3.2 | 24.7 | 0.5 | 40 | chatml | — |
+| 21 | gemma2-2b | 4.5 | 2.8 | 4.0 | 5.8 | 22.3 | 0.1 | 40 | gemma | — |
+| 22 | llama3.2-3b | 2.8 | 1.8 | 5.0 | 2.7 | 19.7 | 1.0 | 40 | llama3 | — |
+| 23 | gemma3-1b | 2.7 | 2.2 | 3.5 | 2.7 | 31.5 | 1.0 | 40 | gemma | — |
+| 24 | phi3-3.8b | 2.5 | 2.2 | 4.0 | 2.2 | 17.7 | 0.2 | 40 | phi3 | — |
+| 25 | llama3.2-1b | 2.4 | 1.2 | 4.5 | 2.5 | 42.2 | 0.3 | 40 | llama3 | — |
+| 26 | phi4-mini | 2.3 | 2.5 | 3.0 | 2.0 | 16.8 | 1.0 | 40 | phi3 | ✅ |
+| 27 | llama3.2-3b-new | 2.2 | 1.5 | 3.5 | 2.2 | 19.7 | 0.0 | 40 | llama3 | — |
 
 ---
 
@@ -112,8 +116,8 @@ Each model was tested at 7 temperatures (0.0, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0) with
 | t=0.1 | 3 | qwen3.5-2b, qwen2.5-coder-3b, gemma2-2b |
 | t=0.2 | 2 | lfm2.5-2.6b, phi3-3.8b |
 | t=0.3 | 7 | hermes3-3b-q5, smallthinker-3b, qwen2.5-3b, ministral-3b-reasoning, granite3.2-2b, stablelm-zephyr, llama3.2-1b |
-| t=0.5 | 2 | ministral-3b, gemma4-e2b |
-| t=0.7 | 3 | hermes3-3b-q4, granite4-3b, gemma3n-e2b |
+| t=0.5 | 1 | ministral-3b |
+| t=0.7 | 4 | hermes3-3b-q4, gemma3n-e2b, granite4-3b, gemma4-e2b |
 | t=1.0 | 7 | granite4.1-3b, qwen3-1.7b, smollm3, granite4.2-3b, llama3.2-3b, gemma3-1b, phi4-mini |
 
 **Key insight:** There is no single "best" temperature. Reasoning/thinking models (DeepSeek R1, Ministral Reasoning) prefer low temperatures (0.0-0.3), while creative models (Granite 4.1, Qwen 3 1.7B) benefit from high temperatures (1.0). This is why the transmission service stores a per-model locked temperature rather than using a global default.
@@ -126,37 +130,37 @@ After locking the best temperature per model, we swept top_k across 3 values: 20
 
 | Top-K | # Models Where Best | Percentage | Notes |
 |-------|---------------------|------------|-------|
-| k=20 | 4 | 15% | Better for some high-temp creative models |
-| k=40 | 21 | 78% | Clear winner — default setting |
-| k=64 | 2 | 7% | Marginally better for a few reasoning models |
+| k=20 | 4 | 15% |  |
+| k=40 | 21 | 78% |  |
+| k=64 | 2 | 7% |  |
 
 k=40 is the confirmed default for the transmission service. The 4 models that prefer k=20 are still tested at k=40 in the routing table (the difference is typically <0.3 points), and k=40 provides the best balance across all categories.
 
 ---
 
-## DeepSeek Template Discovery
+## Chat Template Fixes — DeepSeek & E2B
 
-During benchmarking, DeepSeek R1-Distill models (1.5B and 7B) scored remarkably low — 3.7 and 2.4 respectively. Investigation revealed the models were **ignoring prompts entirely**, hallucinating about "DeepSeek company" instead of answering questions.
+Two model families were discovered to use the wrong chat template, causing them to ignore prompts entirely and produce garbage or hallucinated output.
 
-### Root Cause
+### DeepSeek R1 Distills (deepseek -> chatml)
 
-The eval harness was using the `deepseek` chat template, which is designed for the original DeepSeek Coder models. However, DeepSeek R1-Distill models are **Qwen-architecture models** fine-tuned by DeepSeek — they use the ChatML format (`<|im_start|>`/`<|im_end|>` tags), not the DeepSeek-specific format.
+DeepSeek R1-Distill models are **Qwen-architecture models** fine-tuned by DeepSeek - they use ChatML format, not the DeepSeek-specific format.
 
-### Before Fix (deepseek template)
+| Model | Before (deepseek) | After (chatml) | Improvement |
+|-------|-------------------|----------------|-------------|
+| deepseek-r1-1.5b | 3.7 | 5.3 | +1.6 (43%) |
+| deepseek-r1-7b | 2.4 | 6.2 | +3.8 (158%) |
 
-| Model | Avg Score | Symptoms |
-|-------|-----------|----------|
-| deepseek-r1-1.5b | 3.7 | Hallucinated about "DeepSeek company", ignored prompts |
-| deepseek-r1-7b | 2.4 | Same hallucination, even worse compliance |
+### E2B MatFormer Models (gemma -> chatml)
 
-### After Fix (chatml template)
+Gemma 3n E2B and Gemma 4 E2B are MatFormer models. The `gemma` template caused them to hallucinate about "Gemini 1.5 Pro vs GPT-4 Turbo" or output only `"_4"`. Switching to `chatml` with `--jinja` fixed both.
 
-| Model | Avg Score | Improvement | Key Changes |
-|-------|-----------|-------------|-------------|
-| deepseek-r1-1.5b | 5.3 | +1.6 (43%) | Coding/math: 9.2/10, produces reasoning + answer |
-| deepseek-r1-7b | 6.2 | +3.8 (158%) | Coding/math: 10/10 on HTML and math proofs |
+| Model | Before (gemma) | After (chatml) | Improvement |
+|-------|-----------------|----------------|-------------|
+| gemma3n-e2b | 1.9 | 7.1 | +5.2 (273%) |
+| gemma4-e2b | 0.8 | 6.0 | +5.2 (650%) |
 
-**Lesson:** Always verify the chat template matches the model's architecture, not just its name. A "DeepSeek" model may not use the "deepseek" template. This finding is encoded in the transmission service's test suite (`test_deepseek_uses_chatml_not_deepseek`) to prevent regression.
+**Lesson:** Always verify the chat template matches the model's architecture, not just its name. These findings are encoded in the transmission service's test suite to prevent regression.
 
 ---
 
@@ -182,15 +186,15 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 | Rank | Model | Creative | Speed (t/s) | Temp | Thinking |
 |------|-------|--------|-------------|------|----------|
 | 1 | ministral-3b-reasoning | 9.5 | 18.7 | 0.3 | ✅ |
-| 2 | hermes3-3b-q5 | 9.0 | 19.4 | 0.3 | — |
-| 3 | qwen3.5-2b | 9.0 | 24.9 | 0.1 | ✅ |
-| 4 | qwen2.5-3b | 8.5 | 20.1 | 0.3 | — |
-| 5 | granite4.1-3b | 8.5 | 18.9 | 1.0 | — |
-| 6 | qwen2.5-coder-3b | 8.5 | 20.0 | 0.1 | — |
-| 7 | stablelm-zephyr | 8.0 | 26.4 | 0.3 | — |
-| 8 | deepseek-r1-7b | 7.0 | 9.7 | 0.0 | ✅ |
-| 9 | smollm3 | 7.0 | 20.8 | 1.0 | — |
-| 10 | granite3.2-2b | 7.0 | 26.6 | 0.3 | — |
+| 2 | gemma3n-e2b | 9.5 | 21.5 | 0.7 | ✅ |
+| 3 | gemma4-e2b | 9.5 | 23.4 | 0.7 | ✅ |
+| 4 | hermes3-3b-q5 | 9.0 | 19.4 | 0.3 | — |
+| 5 | qwen3.5-2b | 9.0 | 24.9 | 0.1 | ✅ |
+| 6 | qwen2.5-3b | 8.5 | 20.1 | 0.3 | — |
+| 7 | granite4.1-3b | 8.5 | 18.9 | 1.0 | — |
+| 8 | qwen2.5-coder-3b | 8.5 | 20.0 | 0.1 | — |
+| 9 | stablelm-zephyr | 8.0 | 26.4 | 0.3 | — |
+| 10 | deepseek-r1-7b | 7.0 | 9.7 | 0.0 | ✅ |
 
 ### Function Calls — Top 10
 
@@ -549,7 +553,43 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 - Excellent at coding & math
 - ✅ Recommended for production use
 
-### #11 — granite3.2-2b
+### #11 — gemma3n-e2b
+
+| Setting | Value |
+|---------|-------|
+| File | `gemma-3n-E2B-it-Q4_K_M.gguf` |
+| Chat Template | chatml |
+| Thinking Model | Yes (requires --jinja) |
+| Best Temperature | 0.7 |
+| Top-K | 40 |
+| Top-P | 0.9 |
+| Repeat Penalty | 1.1 |
+| Max Tokens | 2048 |
+| Context Window | 2,048 |
+| Generation Speed | 21.5 tok/s |
+
+| Prompt | Category | Score | Speed (t/s) |
+|--------|----------|-------|-------------|
+| Creative Writing - Short Story | Creative | 9/10 | 21.3 |
+| Function Call: Email Draft | Func Call | 9/10 | 21.1 |
+| Function Call: Read File | Func Call | 2/10 | 21.5 |
+| Function Call: SQLite Query | Func Call | 2/10 | 20.9 |
+| Function Call: Terminal Command | Func Call | 10/10 | 21.6 |
+| Function Call: Web Search | Func Call | 4/10 | 21.9 |
+| Function Call: Write File | Func Call | 2/10 | 21.5 |
+| HTML Web Browser Game | HTML | 10/10 | 21.7 |
+| HTML Profile Cards Page | HTML | 9/10 | 21.7 |
+| Iambic Pentameter Poem | Creative | 10/10 | 21.5 |
+| Mathematical Proof | Math | 8/10 | 21.7 |
+| Python Data Processing | Python | 10/10 | 21.7 |
+
+- Excellent at coding & math
+- Excellent at creative writing & poetry
+- Reasoning model — produces thinking blocks, needs --jinja flag
+- ✅ Recommended for production use
+- MatFormer (E2B) model — uses chatml template (not gemma), fixed 2026-09-02
+
+### #12 — granite3.2-2b
 
 | Setting | Value |
 |---------|-------|
@@ -583,7 +623,7 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 - Fast generation (26.6 tok/s)
 - ✅ Recommended for production use
 
-### #12 — granite4.2-3b
+### #13 — granite4.2-3b
 
 | Setting | Value |
 |---------|-------|
@@ -615,7 +655,7 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 
 - Excellent at coding & math
 
-### #13 — qwen2.5-coder-3b
+### #14 — qwen2.5-coder-3b
 
 | Setting | Value |
 |---------|-------|
@@ -647,7 +687,7 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 
 - Excellent at coding & math
 
-### #14 — granite4-3b
+### #15 — granite4-3b
 
 | Setting | Value |
 |---------|-------|
@@ -679,7 +719,7 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 
 - Excellent at coding & math
 
-### #15 — stablelm-zephyr
+### #16 — stablelm-zephyr
 
 | Setting | Value |
 |---------|-------|
@@ -712,7 +752,7 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 - Excellent at coding & math
 - Fast generation (26.4 tok/s)
 
-### #16 — lfm2.5-2.6b
+### #17 — lfm2.5-2.6b
 
 | Setting | Value |
 |---------|-------|
@@ -744,7 +784,43 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 
 - Excellent at coding & math
 
-### #17 — deepseek-r1-1.5b
+### #18 — gemma4-e2b
+
+| Setting | Value |
+|---------|-------|
+| File | `gemma-4-E2B-it-Q4_K_M.gguf` |
+| Chat Template | chatml |
+| Thinking Model | Yes (requires --jinja) |
+| Best Temperature | 0.7 |
+| Top-K | 40 |
+| Top-P | 0.9 |
+| Repeat Penalty | 1.1 |
+| Max Tokens | 2048 |
+| Context Window | 2,048 |
+| Generation Speed | 23.4 tok/s |
+
+| Prompt | Category | Score | Speed (t/s) |
+|--------|----------|-------|-------------|
+| Creative Writing - Short Story | Creative | 10/10 | 24.2 |
+| Function Call: Email Draft | Func Call | 9/10 | 23.0 |
+| Function Call: Read File | Func Call | 2/10 | 22.8 |
+| Function Call: SQLite Query | Func Call | 1/10 | 22.6 |
+| Function Call: Terminal Command | Func Call | 2/10 | 23.5 |
+| Function Call: Web Search | Func Call | 2/10 | 23.5 |
+| Function Call: Write File | Func Call | 0/10 | 22.3 |
+| HTML Web Browser Game | HTML | 10/10 | 23.8 |
+| HTML Profile Cards Page | HTML | 9/10 | 23.8 |
+| Iambic Pentameter Poem | Creative | 9/10 | 23.2 |
+| Mathematical Proof | Math | 8/10 | 23.8 |
+| Python Data Processing | Python | 10/10 | 23.9 |
+
+- Excellent at coding & math
+- Excellent at creative writing & poetry
+- Struggles with function-call JSON — produces prose instead
+- Reasoning model — produces thinking blocks, needs --jinja flag
+- MatFormer (E2B) model — uses chatml template (not gemma), fixed 2026-09-02
+
+### #19 — deepseek-r1-1.5b
 
 | Setting | Value |
 |---------|-------|
@@ -779,7 +855,7 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 - Fast generation (32.7 tok/s)
 - Reasoning model — produces thinking blocks, needs --jinja flag
 
-### #18 — ministral-3b
+### #20 — ministral-3b
 
 | Setting | Value |
 |---------|-------|
@@ -811,7 +887,7 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 
 - Struggles with function-call JSON — produces prose instead
 
-### #19 — gemma2-2b
+### #21 — gemma2-2b
 
 | Setting | Value |
 |---------|-------|
@@ -841,7 +917,7 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 | Mathematical Proof | Math | 2/10 | 22.4 |
 | Python Data Processing | Python | 6/10 | 22.3 |
 
-### #20 — llama3.2-3b
+### #22 — llama3.2-3b
 
 | Setting | Value |
 |---------|-------|
@@ -874,7 +950,7 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 - Struggles with function-call JSON — produces prose instead
 - ⚠️ Very poor — not recommended for production use
 
-### #21 — gemma3-1b
+### #23 — gemma3-1b
 
 | Setting | Value |
 |---------|-------|
@@ -908,7 +984,7 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 - Fast generation (31.5 tok/s)
 - ⚠️ Very poor — not recommended for production use
 
-### #22 — phi3-3.8b
+### #24 — phi3-3.8b
 
 | Setting | Value |
 |---------|-------|
@@ -941,7 +1017,7 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 - Struggles with function-call JSON — produces prose instead
 - ⚠️ Very poor — not recommended for production use
 
-### #23 — llama3.2-1b
+### #25 — llama3.2-1b
 
 | Setting | Value |
 |---------|-------|
@@ -975,7 +1051,7 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 - Fast generation (42.2 tok/s)
 - ⚠️ Very poor — not recommended for production use
 
-### #24 — phi4-mini
+### #26 — phi4-mini
 
 | Setting | Value |
 |---------|-------|
@@ -1009,41 +1085,7 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 - Reasoning model — produces thinking blocks, needs --jinja flag
 - ⚠️ Very poor — not recommended for production use
 
-### #25 — gemma3n-e2b
-
-| Setting | Value |
-|---------|-------|
-| File | `gemma-3n-E2B-it-Q4_K_M.gguf` |
-| Chat Template | gemma |
-| Thinking Model | Yes (requires --jinja) |
-| Best Temperature | 0.7 |
-| Top-K | 40 |
-| Top-P | 0.9 |
-| Repeat Penalty | 1.1 |
-| Max Tokens | 2048 |
-| Context Window | 2,048 |
-| Generation Speed | 21.1 tok/s |
-
-| Prompt | Category | Score | Speed (t/s) |
-|--------|----------|-------|-------------|
-| Creative Writing - Short Story | Creative | 4/10 | 21.2 |
-| Function Call: Email Draft | Func Call | 2/10 | 21.3 |
-| Function Call: Read File | Func Call | 2/10 | 21.4 |
-| Function Call: SQLite Query | Func Call | 2/10 | 21.2 |
-| Function Call: Terminal Command | Func Call | 2/10 | 21.2 |
-| Function Call: Web Search | Func Call | 4/10 | 21.5 |
-| Function Call: Write File | Func Call | 2/10 | 21.2 |
-| HTML Web Browser Game | HTML | 0/10 | 21.3 |
-| HTML Profile Cards Page | HTML | 0/10 | 19.1 |
-| Iambic Pentameter Poem | Creative | 3/10 | 21.3 |
-| Mathematical Proof | Math | 1/10 | 21.2 |
-| Python Data Processing | Python | 5/10 | 21.5 |
-
-- Struggles with function-call JSON — produces prose instead
-- Reasoning model — produces thinking blocks, needs --jinja flag
-- ⚠️ Very poor — not recommended for production use
-
-### #26 — llama3.2-3b-new
+### #27 — llama3.2-3b-new
 
 | Setting | Value |
 |---------|-------|
@@ -1076,40 +1118,6 @@ The eval harness was using the `deepseek` chat template, which is designed for t
 - Struggles with function-call JSON — produces prose instead
 - ⚠️ Very poor — not recommended for production use
 
-### #27 — gemma4-e2b
-
-| Setting | Value |
-|---------|-------|
-| File | `gemma-4-E2B-it-Q4_K_M.gguf` |
-| Chat Template | gemma |
-| Thinking Model | Yes (requires --jinja) |
-| Best Temperature | 0.5 |
-| Top-K | 40 |
-| Top-P | 0.9 |
-| Repeat Penalty | 1.1 |
-| Max Tokens | 2048 |
-| Context Window | 2,048 |
-| Generation Speed | 19.8 tok/s |
-
-| Prompt | Category | Score | Speed (t/s) |
-|--------|----------|-------|-------------|
-| Creative Writing - Short Story | Creative | 1/10 | 19.5 |
-| Function Call: Email Draft | Func Call | 3/10 | 20.2 |
-| Function Call: Read File | Func Call | 1/10 | 20.3 |
-| Function Call: SQLite Query | Func Call | 1/10 | 20.1 |
-| Function Call: Terminal Command | Func Call | 1/10 | 20.1 |
-| Function Call: Web Search | Func Call | 1/10 | 20.5 |
-| Function Call: Write File | Func Call | 1/10 | 20.3 |
-| HTML Web Browser Game | HTML | 0/10 | 20.0 |
-| HTML Profile Cards Page | HTML | 0/10 | 18.7 |
-| Iambic Pentameter Poem | Creative | 6/10 | 20.1 |
-| Mathematical Proof | Math | 0/10 | 19.3 |
-| Python Data Processing | Python | 0/10 | 18.7 |
-
-- Struggles with function-call JSON — produces prose instead
-- Reasoning model — produces thinking blocks, needs --jinja flag
-- ⚠️ Very poor — not recommended for production use
-
 ---
 
 ## How the Transmission Works
@@ -1134,7 +1142,7 @@ Following the principle "quality before speed," we optimized one parameter at a 
 
 1. **Temperature sweep:** 7 values (0.0-1.0), all models, all prompts. Best temp locked per model.
 2. **Top-K sweep:** 3 values (20, 40, 64) at locked temps. k=40 confirmed optimal for 78% of models.
-3. **Template verification:** Discovered DeepSeek R1 distills need chatml, not deepseek. Fixed and re-benchmarked.
+3. **Template verification:** Discovered DeepSeek R1 distills and E2B MatFormer models both need chatml, not their namesake templates. Fixed and re-benchmarked.
 
 Next planned sweep: top_p (not yet conducted as of this report).
 
@@ -1147,31 +1155,13 @@ The classifier uses keyword matching and heuristics — no LLM is needed for cla
 - **function_calls:** Tool-use format (keywords: terminal, sqlite, email, web search, read file)
 - **general_purpose:** Fallback for questions and explanations (keywords: what, how, why, explain)
 
-The classifier also applies heuristic boosts (e.g., "write a function" without a language name still triggers coding_math).
-
 ### Step 4: Routing Table Construction
 
-For each category, the top 6 models were selected from the benchmark data, ranked by their group-average quality score. Each model entry includes:
-
-- Quality score (group-specific average, 1-10 scale)
-- Generation speed (tokens/second)
-- Model file size (GB)
-- Chat template (chatml, gemma, etc.)
-- Thinking flag (requires --jinja)
-- Best temperature (locked from sweep)
-- Top-K (locked at 40)
-- Model file path
+For each category, the top 6 models were selected from the benchmark data, ranked by their group-average quality score. Each model entry includes quality score, speed, file size, chat template, thinking flag, best temperature, top_k, and model file path.
 
 ### Step 5: Operator Presentation and Execution
 
-When a prompt is submitted, the service:
-
-1. Classifies the prompt (<1ms)
-2. Presents the top 6 models with quality, speed, size, thinking flag, and Q x S metric
-3. Operator selects a model (or accepts #1 default)
-4. Builds and executes a llama-cli command with the model's best settings
-5. Cleans the output (removes banner, spinner characters, stats)
-6. Reports results: model used, category, time, tokens generated, cloud tokens saved
+When a prompt is submitted, the service classifies it, presents the top 6 models, operator selects one, builds and executes a llama-cli command with the model's best settings, cleans the output, and reports results including cloud tokens saved.
 
 ---
 
@@ -1254,8 +1244,6 @@ When a prompt is submitted, the service:
 
 ### Scoring System
 
-Each prompt was scored on a 0-10 scale based on task-specific criteria:
-
 | Category | Scoring Criteria |
 |----------|------------------|
 | HTML | Valid HTML structure, CSS layout (flexbox), responsive design, interactivity |
@@ -1271,7 +1259,8 @@ Each prompt was scored on a 0-10 scale based on task-specific criteria:
 |-------|---------------|------------|-------------|
 | Temperature | 0.0, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0 (7 values) | 27 x 7 x 12 = 2,268 | 7 models peak at t=0.3, 7 at t=1.0 |
 | Top-K | 20, 40, 64 (3 values) | 27 x 3 x 12 = 972 | k=40 wins 21/27 models (78%) |
-| Template Fix | deepseek vs chatml | DeepSeek R1 1.5B + 7B | chatml fixes DeepSeek - 3.7->5.3, 2.4->6.2 |
+| Template Fix - DeepSeek | deepseek vs chatml | DeepSeek R1 1.5B + 7B | chatml fixes DeepSeek - 3.7->5.3, 2.4->6.2 |
+| Template Fix - E2B | gemma vs chatml | gemma3n-e2b + gemma4-e2b | chatml fixes E2B - 1.9->7.1, 0.8->6.0 |
 
 ### Standard Parameters (held constant)
 
@@ -1368,16 +1357,7 @@ This project is built on benchmark data from:
 
 ## Findings Report
 
-See [`Findings_Report.pdf`](Findings_Report.pdf) for the 25-page comprehensive report covering:
-- Methodology and scoring rubrics
-- Full leaderboard with all 27 models
-- Temperature sweep distribution
-- Top-K sweep results
-- DeepSeek template discovery and fix
-- Per-model findings with ideal settings for all 27 models
-- Category analysis (coding, creative, function calls)
-- How the transmission service was built
-- Routing tables and conclusions
+See [`Findings_Report.pdf`](Findings_Report.pdf) for the 25-page comprehensive report covering methodology, full leaderboard, sweep results, template fixes, per-model findings, category analysis, and how the transmission service was built.
 
 ## Related Projects
 
