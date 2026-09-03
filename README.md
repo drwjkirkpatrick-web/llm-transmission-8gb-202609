@@ -1173,12 +1173,12 @@ When a prompt is submitted, the service classifies it, presents the top 6 models
 
 | # | Model | Quality | Speed | Size | Think | Temp | k |
 |---|-------|---------|-------|------|-------|------|---|
-| 1 | LFM 2.5 2.6B | 10.0 | 23.8 t/s | 1.6G | no | 0.2 | 40 |
-| 2 | Hermes 3 3B Q5 | 9.8 | 19.4 t/s | 2.3G | no | 0.3 | 40 |
-| 3 | Hermes 3 3B Q4 | 9.8 | 19.7 t/s | 1.9G | no | 0.7 | 40 |
-| 4 | Qwen 3.5 2B | 9.8 | 24.9 t/s | 1.4G | yes | 0.1 | 40 |
-| 5 | Granite 3.2 2B | 9.5 | 26.6 t/s | 1.4G | no | 0.3 | 40 |
-| 6 | Qwen 2.5 3B | 9.0 | 20.1 t/s | 1.8G | no | 0.3 | 40 |
+| 1 | DeepSeek R1 7B | 10.0 | 9.7 t/s | 3.0G | yes | 0.0 | 40 |
+| 2 | LFM 2.5 2.6B | 10.0 | 23.8 t/s | 1.7G | no | 0.2 | 40 |
+| 3 | Hermes 3 3B Q4 | 9.8 | 19.7 t/s | 2.0G | no | 0.7 | 40 |
+| 4 | Hermes 3 3B Q5 | 9.8 | 19.4 t/s | 2.3G | no | 0.3 | 40 |
+| 5 | Qwen 3 1.7B | 9.8 | 30.8 t/s | 1.3G | no | 1.0 | 40 |
+| 6 | Qwen 3.5 2B | 9.8 | 24.9 t/s | 1.4G | yes | 0.1 | 40 |
 
 ### creative_poetry
 
@@ -1186,12 +1186,12 @@ When a prompt is submitted, the service classifies it, presents the top 6 models
 
 | # | Model | Quality | Speed | Size | Think | Temp | k |
 |---|-------|---------|-------|------|-------|------|---|
-| 1 | Ministral 3B Reasoning | 9.5 | 18.7 t/s | 2.1G | yes | 0.3 | 40 |
-| 2 | Hermes 3 3B Q5 | 9.0 | 19.4 t/s | 2.3G | no | 0.3 | 40 |
-| 3 | Qwen 3.5 2B | 9.0 | 24.9 t/s | 1.4G | yes | 0.1 | 40 |
-| 4 | Granite 4.1 3B | 8.5 | 18.9 t/s | 2.0G | no | 1.0 | 40 |
-| 5 | Qwen 2.5 3B | 8.5 | 20.1 t/s | 1.8G | no | 0.3 | 40 |
-| 6 | StableLM Zephyr | 8.0 | 26.4 t/s | 1.5G | no | 0.3 | 40 |
+| 1 | Gemma 3n E2B | 9.5 | 21.5 t/s | 3.0G | yes | 0.7 | 40 |
+| 2 | Gemma 4 E2B | 9.5 | 23.4 t/s | 3.1G | yes | 0.7 | 40 |
+| 3 | Ministral 3B Reasoning | 9.5 | 18.7 t/s | 2.1G | yes | 0.3 | 40 |
+| 4 | Hermes 3 3B Q5 | 9.0 | 19.4 t/s | 2.3G | no | 0.3 | 40 |
+| 5 | Qwen 3.5 2B | 9.0 | 24.9 t/s | 1.4G | yes | 0.1 | 40 |
+| 6 | Granite 4.1 3B | 8.5 | 18.9 t/s | 2.0G | no | 1.0 | 40 |
 
 ### function_calls
 
@@ -1199,12 +1199,12 @@ When a prompt is submitted, the service classifies it, presents the top 6 models
 
 | # | Model | Quality | Speed | Size | Think | Temp | k |
 |---|-------|---------|-------|------|-------|------|---|
-| 1 | SmallThinker 3B | 7.7 | 20.1 t/s | 1.8G | yes | 0.3 | 40 |
-| 2 | Hermes 3 3B Q5 | 6.2 | 19.4 t/s | 2.3G | no | 0.3 | 40 |
-| 3 | Hermes 3 3B Q4 | 6.3 | 19.7 t/s | 1.9G | no | 0.7 | 40 |
-| 4 | Qwen 3 1.7B | 6.0 | 30.8 t/s | 1.2G | no | 1.0 | 40 |
-| 5 | DeepSeek R1 7B | 6.3 | 9.7 t/s | 3.0G | yes | 0.0 | 40 |
-| 6 | Qwen 2.5 3B | 6.2 | 20.1 t/s | 1.8G | no | 0.3 | 40 |
+| 1 | SmallThinker 3B | 7.7 | 20.1 t/s | 2.1G | yes | 0.3 | 40 |
+| 2 | DeepSeek R1 7B | 6.3 | 9.7 t/s | 3.0G | yes | 0.0 | 40 |
+| 3 | Hermes 3 3B Q4 | 6.3 | 19.7 t/s | 2.0G | no | 0.7 | 40 |
+| 4 | Hermes 3 3B Q5 | 6.2 | 19.4 t/s | 2.3G | no | 0.3 | 40 |
+| 5 | Qwen 2.5 3B | 6.2 | 20.1 t/s | 1.9G | no | 0.3 | 40 |
+| 6 | Qwen 3 1.7B | 6.0 | 30.8 t/s | 1.3G | no | 1.0 | 40 |
 
 ### general_purpose
 
@@ -1213,11 +1213,11 @@ When a prompt is submitted, the service classifies it, presents the top 6 models
 | # | Model | Quality | Speed | Size | Think | Temp | k |
 |---|-------|---------|-------|------|-------|------|---|
 | 1 | Hermes 3 3B Q5 | 7.8 | 19.4 t/s | 2.3G | no | 0.3 | 40 |
-| 2 | DeepSeek R1 7B | 7.5 | 9.7 t/s | 3.0G | yes | 0.0 | 40 |
-| 3 | SmallThinker 3B | 7.6 | 20.1 t/s | 1.8G | yes | 0.3 | 40 |
-| 4 | Qwen 2.5 3B | 7.5 | 20.1 t/s | 1.8G | no | 0.3 | 40 |
-| 5 | Qwen 3.5 2B | 7.5 | 24.9 t/s | 1.4G | yes | 0.1 | 40 |
-| 6 | Ministral 3B Reasoning | 7.2 | 18.7 t/s | 2.1G | yes | 0.3 | 40 |
+| 2 | SmallThinker 3B | 7.6 | 20.1 t/s | 2.1G | yes | 0.3 | 40 |
+| 3 | DeepSeek R1 7B | 7.5 | 9.7 t/s | 3.0G | yes | 0.0 | 40 |
+| 4 | Hermes 3 3B Q4 | 7.5 | 19.7 t/s | 2.0G | no | 0.7 | 40 |
+| 5 | Qwen 2.5 3B | 7.5 | 20.1 t/s | 1.9G | no | 0.3 | 40 |
+| 6 | Qwen 3.5 2B | 7.5 | 24.9 t/s | 1.4G | yes | 0.1 | 40 |
 
 ---
 
