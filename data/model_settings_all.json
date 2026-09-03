@@ -1,0 +1,583 @@
+{
+  "version": "1.0.0",
+  "description": "Complete optimal settings for all 27 benchmarked models. Includes models not in the routing table top 6 (e.g., granite4-3b prefers k=20, smollm3 prefers k=64). Use this file when adding new categories or expanding the routing table.",
+  "methodology": "Each model's best_temp and best_top_k determined by sweep (one variable at a time). All other params held constant: top_p=0.9, repeat_penalty=1.1, max_tokens=2048.",
+  "models": {
+    "deepseek-r1-1.5b": {
+      "filename": "deepseek-r1-1.5b.gguf",
+      "template": "chatml",
+      "thinking": true,
+      "best_temp": 0.0,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 4096,
+      "size_gb": 1.12,
+      "overall_score": 5.3,
+      "group_scores": {
+        "coding_math": 9.2,
+        "creative_poetry": 4.5,
+        "function_calls": 3.0
+      },
+      "speed_tps": 32.7,
+      "in_routing_table": null
+    },
+    "deepseek-r1-7b": {
+      "filename": "deepseek-r1-7b.gguf",
+      "template": "chatml",
+      "thinking": true,
+      "best_temp": 0.0,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 2048,
+      "size_gb": 3.02,
+      "overall_score": 6.2,
+      "group_scores": {
+        "coding_math": 7.5,
+        "creative_poetry": 3.5,
+        "function_calls": 6.3
+      },
+      "speed_tps": 9.7,
+      "in_routing_table": [
+        "coding_math",
+        "function_calls",
+        "general_purpose"
+      ]
+    },
+    "gemma2-2b": {
+      "filename": "gemma2-2b.gguf",
+      "template": "gemma",
+      "thinking": false,
+      "best_temp": 0.1,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 1.63,
+      "overall_score": 4.5,
+      "group_scores": {
+        "coding_math": 2.8,
+        "creative_poetry": 4.0,
+        "function_calls": 5.8
+      },
+      "speed_tps": 22.3,
+      "in_routing_table": null
+    },
+    "gemma3-1b": {
+      "filename": "gemma3-1b.gguf",
+      "template": "gemma",
+      "thinking": false,
+      "best_temp": 1.0,
+      "best_top_k": 20,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 0.82,
+      "overall_score": 2.9,
+      "group_scores": {
+        "coding_math": 3.2,
+        "creative_poetry": 4.0,
+        "function_calls": 2.3
+      },
+      "speed_tps": 31.3,
+      "in_routing_table": null
+    },
+    "gemma3n-e2b": {
+      "filename": "gemma-3n-E2B-it-Q4_K_M.gguf",
+      "template": "chatml",
+      "thinking": true,
+      "best_temp": 0.7,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 2048,
+      "size_gb": 3.03,
+      "overall_score": 7.1,
+      "group_scores": {
+        "coding_math": 9.2,
+        "creative_poetry": 9.5,
+        "function_calls": 4.8
+      },
+      "speed_tps": 21.5,
+      "in_routing_table": [
+        "creative_poetry"
+      ]
+    },
+    "gemma4-e2b": {
+      "filename": "gemma-4-E2B-it-Q4_K_M.gguf",
+      "template": "chatml",
+      "thinking": true,
+      "best_temp": 0.7,
+      "best_top_k": 20,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 2048,
+      "size_gb": 3.11,
+      "overall_score": 6.0,
+      "group_scores": {
+        "coding_math": 9.5,
+        "creative_poetry": 8.0,
+        "function_calls": 3.0
+      },
+      "speed_tps": 23.5,
+      "in_routing_table": [
+        "creative_poetry"
+      ]
+    },
+    "granite3.2-2b": {
+      "filename": "granite3.2-2b.gguf",
+      "template": "chatml",
+      "thinking": false,
+      "best_temp": 0.3,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 1.55,
+      "overall_score": 7.0,
+      "group_scores": {
+        "coding_math": 9.5,
+        "creative_poetry": 7.0,
+        "function_calls": 5.3
+      },
+      "speed_tps": 26.6,
+      "in_routing_table": null
+    },
+    "granite4-3b": {
+      "filename": "granite4-3b.gguf",
+      "template": "chatml",
+      "thinking": false,
+      "best_temp": 0.7,
+      "best_top_k": 20,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 2.1,
+      "overall_score": 7.2,
+      "group_scores": {
+        "coding_math": 9.5,
+        "creative_poetry": 7.5,
+        "function_calls": 5.7
+      },
+      "speed_tps": 18.9,
+      "in_routing_table": null
+    },
+    "granite4.1-3b": {
+      "filename": "granite4.1-3b.gguf",
+      "template": "chatml",
+      "thinking": false,
+      "best_temp": 1.0,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 2.1,
+      "overall_score": 7.4,
+      "group_scores": {
+        "coding_math": 9.2,
+        "creative_poetry": 8.5,
+        "function_calls": 5.8
+      },
+      "speed_tps": 18.9,
+      "in_routing_table": [
+        "creative_poetry"
+      ]
+    },
+    "granite4.2-3b": {
+      "filename": "granite-4.2-3b-Q4_K_M.gguf",
+      "template": "chatml",
+      "thinking": false,
+      "best_temp": 1.0,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 2.24,
+      "overall_score": 6.9,
+      "group_scores": {
+        "coding_math": 9.5,
+        "creative_poetry": 6.5,
+        "function_calls": 5.3
+      },
+      "speed_tps": 18.9,
+      "in_routing_table": null
+    },
+    "hermes3-3b-q4": {
+      "filename": "hermes3-3b-q4.gguf",
+      "template": "chatml",
+      "thinking": false,
+      "best_temp": 0.7,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 2.02,
+      "overall_score": 7.5,
+      "group_scores": {
+        "coding_math": 9.8,
+        "creative_poetry": 6.5,
+        "function_calls": 6.3
+      },
+      "speed_tps": 19.7,
+      "in_routing_table": [
+        "coding_math",
+        "function_calls",
+        "general_purpose"
+      ]
+    },
+    "hermes3-3b-q5": {
+      "filename": "hermes3-3b-q5.gguf",
+      "template": "chatml",
+      "thinking": false,
+      "best_temp": 0.3,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 2.32,
+      "overall_score": 7.8,
+      "group_scores": {
+        "coding_math": 9.8,
+        "creative_poetry": 9.0,
+        "function_calls": 6.2
+      },
+      "speed_tps": 19.4,
+      "in_routing_table": [
+        "coding_math",
+        "creative_poetry",
+        "function_calls",
+        "general_purpose"
+      ]
+    },
+    "lfm2.5-2.6b": {
+      "filename": "lfm2.5-2.6b.gguf",
+      "template": "chatml",
+      "thinking": false,
+      "best_temp": 0.2,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 1.67,
+      "overall_score": 6.6,
+      "group_scores": {
+        "coding_math": 10.0,
+        "creative_poetry": 5.5,
+        "function_calls": 4.7
+      },
+      "speed_tps": 23.8,
+      "in_routing_table": [
+        "coding_math"
+      ]
+    },
+    "llama3.2-1b": {
+      "filename": "Llama-3.2-1B-Instruct.Q4_K_M.gguf",
+      "template": "llama3",
+      "thinking": false,
+      "best_temp": 0.3,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 0.81,
+      "overall_score": 2.4,
+      "group_scores": {
+        "coding_math": 1.2,
+        "creative_poetry": 4.5,
+        "function_calls": 2.5
+      },
+      "speed_tps": 42.2,
+      "in_routing_table": null
+    },
+    "llama3.2-3b": {
+      "filename": "llama3.2-3b-bench.gguf",
+      "template": "llama3",
+      "thinking": false,
+      "best_temp": 1.0,
+      "best_top_k": 64,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 2.02,
+      "overall_score": 2.9,
+      "group_scores": {
+        "coding_math": 2.8,
+        "creative_poetry": 3.5,
+        "function_calls": 2.8
+      },
+      "speed_tps": 19.7,
+      "in_routing_table": null
+    },
+    "llama3.2-3b-new": {
+      "filename": "Llama-3.2-3B-Instruct.Q4_K_M.gguf",
+      "template": "llama3",
+      "thinking": false,
+      "best_temp": 0.0,
+      "best_top_k": 20,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 2.02,
+      "overall_score": 2.2,
+      "group_scores": {
+        "coding_math": 1.5,
+        "creative_poetry": 3.5,
+        "function_calls": 2.2
+      },
+      "speed_tps": 19.7,
+      "in_routing_table": null
+    },
+    "ministral-3b": {
+      "filename": "ministral-3b-instruct-q5_k_m.gguf",
+      "template": "chatml",
+      "thinking": false,
+      "best_temp": 0.5,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 2.35,
+      "overall_score": 4.9,
+      "group_scores": {
+        "coding_math": 7.2,
+        "creative_poetry": 5.5,
+        "function_calls": 3.2
+      },
+      "speed_tps": 24.7,
+      "in_routing_table": null
+    },
+    "ministral-3b-reasoning": {
+      "filename": "Ministral-3-3B-Reasoning-2512-Q4_K_M.gguf",
+      "template": "chatml",
+      "thinking": true,
+      "best_temp": 0.3,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 2.15,
+      "overall_score": 7.2,
+      "group_scores": {
+        "coding_math": 9.5,
+        "creative_poetry": 9.5,
+        "function_calls": 5.0
+      },
+      "speed_tps": 18.7,
+      "in_routing_table": [
+        "creative_poetry"
+      ]
+    },
+    "phi3-3.8b": {
+      "filename": "phi3-3.8b.gguf",
+      "template": "phi3",
+      "thinking": false,
+      "best_temp": 0.2,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 2.18,
+      "overall_score": 2.5,
+      "group_scores": {
+        "coding_math": 2.2,
+        "creative_poetry": 4.0,
+        "function_calls": 2.2
+      },
+      "speed_tps": 17.7,
+      "in_routing_table": null
+    },
+    "phi4-mini": {
+      "filename": "Phi-4-mini-instruct.Q4_K_M.gguf",
+      "template": "phi3",
+      "thinking": true,
+      "best_temp": 1.0,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 2.49,
+      "overall_score": 2.3,
+      "group_scores": {
+        "coding_math": 2.5,
+        "creative_poetry": 3.0,
+        "function_calls": 2.0
+      },
+      "speed_tps": 16.8,
+      "in_routing_table": null
+    },
+    "qwen2.5-3b": {
+      "filename": "qwen2.5-3b.gguf",
+      "template": "chatml",
+      "thinking": false,
+      "best_temp": 0.3,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 1.93,
+      "overall_score": 7.5,
+      "group_scores": {
+        "coding_math": 9.0,
+        "creative_poetry": 8.5,
+        "function_calls": 6.2
+      },
+      "speed_tps": 20.1,
+      "in_routing_table": [
+        "function_calls",
+        "general_purpose"
+      ]
+    },
+    "qwen2.5-coder-3b": {
+      "filename": "qwen2.5-coder-3b.gguf",
+      "template": "chatml",
+      "thinking": false,
+      "best_temp": 0.1,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 1.93,
+      "overall_score": 6.9,
+      "group_scores": {
+        "coding_math": 9.5,
+        "creative_poetry": 8.5,
+        "function_calls": 4.7
+      },
+      "speed_tps": 20.0,
+      "in_routing_table": null
+    },
+    "qwen3-1.7b": {
+      "filename": "Qwen3-1.7B.Q4_K_M.gguf",
+      "template": "chatml",
+      "thinking": false,
+      "best_temp": 1.0,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 1.28,
+      "overall_score": 7.2,
+      "group_scores": {
+        "coding_math": 9.8,
+        "creative_poetry": 5.5,
+        "function_calls": 6.0
+      },
+      "speed_tps": 30.8,
+      "in_routing_table": [
+        "coding_math",
+        "function_calls"
+      ]
+    },
+    "qwen3.5-2b": {
+      "filename": "Qwen_Qwen3.5-2B-Q4_K_M.gguf",
+      "template": "chatml",
+      "thinking": true,
+      "best_temp": 0.1,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 1.4,
+      "overall_score": 7.5,
+      "group_scores": {
+        "coding_math": 9.8,
+        "creative_poetry": 9.0,
+        "function_calls": 5.5
+      },
+      "speed_tps": 24.9,
+      "in_routing_table": [
+        "coding_math",
+        "creative_poetry",
+        "general_purpose"
+      ]
+    },
+    "smallthinker-3b": {
+      "filename": "smallthinker-3b.gguf",
+      "template": "chatml",
+      "thinking": true,
+      "best_temp": 0.3,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 4096,
+      "size_gb": 2.1,
+      "overall_score": 7.6,
+      "group_scores": {
+        "coding_math": 8.5,
+        "creative_poetry": 5.5,
+        "function_calls": 7.7
+      },
+      "speed_tps": 20.1,
+      "in_routing_table": [
+        "function_calls",
+        "general_purpose"
+      ]
+    },
+    "smollm3": {
+      "filename": "HuggingFaceTB_SmolLM3-3B-Q4_K_M.gguf",
+      "template": "chatml",
+      "thinking": false,
+      "best_temp": 1.0,
+      "best_top_k": 64,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 1.92,
+      "overall_score": 7.5,
+      "group_scores": {
+        "coding_math": 9.5,
+        "creative_poetry": 8.5,
+        "function_calls": 5.8
+      },
+      "speed_tps": 20.8,
+      "in_routing_table": null
+    },
+    "stablelm-zephyr": {
+      "filename": "stablelm-zephyr.gguf",
+      "template": "chatml",
+      "thinking": false,
+      "best_temp": 0.3,
+      "best_top_k": 40,
+      "top_p": 0.9,
+      "repeat_penalty": 1.1,
+      "max_tokens": 2048,
+      "context": 8192,
+      "size_gb": 1.61,
+      "overall_score": 6.8,
+      "group_scores": {
+        "coding_math": 9.8,
+        "creative_poetry": 8.0,
+        "function_calls": 4.3
+      },
+      "speed_tps": 26.4,
+      "in_routing_table": null
+    }
+  }
+}
