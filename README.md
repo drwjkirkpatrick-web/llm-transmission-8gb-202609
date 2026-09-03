@@ -1190,7 +1190,7 @@ When a prompt is submitted, the service classifies it, presents the top 6 models
 | # | Model | Quality | Speed | Size | Think | Temp | k |
 |---|-------|---------|-------|------|-------|------|---|
 | 1 | Gemma 3n E2B | 9.5 | 21.5 t/s | 3.0G | yes | 0.7 | 40 |
-| 2 | Gemma 4 E2B | 9.5 | 23.4 t/s | 3.1G | yes | 0.7 | 40 |
+| 2 | Gemma 4 E2B | 9.5 | 23.4 t/s | 3.1G | yes | 0.7 | 20 |
 | 3 | Ministral 3B Reasoning | 9.5 | 18.7 t/s | 2.1G | yes | 0.3 | 40 |
 | 4 | Hermes 3 3B Q5 | 9.0 | 19.4 t/s | 2.3G | no | 0.3 | 40 |
 | 5 | Qwen 3.5 2B | 9.0 | 24.9 t/s | 1.4G | yes | 0.1 | 40 |

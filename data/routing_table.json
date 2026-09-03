@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "2.2.0",
   "source": "jetson-model-zoo (27 models, temp+top_k sweeps, 2026-09-02) + E2B chatml fix (2026-09-02)",
   "hardware": "NVIDIA Jetson Nano 8GB, llama.cpp CUDA, -ngl 999 -fa on",
   "methodology": "Temperature swept across 7 values (0.0-1.0), top_k swept across 3 values (20, 40, 64). Best temp locked per model. k=40 confirmed optimal for 21/27 models. DeepSeek R1 distills use chatml template (not deepseek). E2B MatFormer models use chatml (not gemma). Quality scores from 12-prompt benchmark across 6 categories.",
@@ -161,7 +161,7 @@
           "template": "chatml",
           "thinking": true,
           "best_temp": 0.7,
-          "top_k": 40
+          "top_k": 20
         },
         {
           "model": "ministral-3b-reasoning",
@@ -405,5 +405,6 @@
         }
       ]
     }
-  }
+  },
+  "top_k_methodology": "Per-model optimal top_k from sweep. k=40 is optimal for 21/27 models. granite4-3b benefits from k=20 (+0.50) and smollm3 from k=64 (+0.33), but neither is in the routing table top 6. All routing table models use k=40."
 }
