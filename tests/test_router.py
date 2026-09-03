@@ -220,3 +220,11 @@ class TestRoutingTable:
                 if "deepseek" in m["model"].lower():
                     assert m["template"] == "chatml", \
                         f"{m['model']} must use chatml, not {m['template']}"
+
+    def test_all_models_have_top_p(self):
+        """All routing table models should have top_p=0.9 (confirmed by sweep)."""
+        for cat_id, cat in self.table["categories"].items():
+            for m in cat["top_models"]:
+                assert "top_p" in m, f"{cat_id}/{m['model']} missing top_p field"
+                assert m["top_p"] == 0.9, \
+                    f"{cat_id}/{m['model']} top_p should be 0.9, got {m['top_p']}"

@@ -6,10 +6,12 @@ then runs the prompt with the operator's chosen model using the best
 settings determined from our benchmark data.
 
 Data sources:
-  - jetson-model-zoo: 27 models, temp sweep (7 temps) + top_k sweep (3 values)
-    12 prompts across 6 categories, 2916 total scored rows (2026-09-02)
+  - jetson-model-zoo: 27 models, 3 sweeps (temp ×7, top_k ×3, top_p ×2)
+    12 prompts across 6 categories, 3240 total scored rows (2026-09-03)
+  - Per-prompt best settings: best_settings_per_prompt.json (324 model×prompt combos)
   - jetson-llm-benchmark: 20 models, 10 categories (2026-08-18)
   - DeepSeek R1 distills use chatml template (not deepseek) — fixed 2026-09-02
+  - top_p=0.9 confirmed optimal for 21/27 models (top_p sweep completed 2026-09-03)
 
 Hardware: NVIDIA Jetson Nano 8GB, llama.cpp CUDA, -ngl 999 -fa on
 """

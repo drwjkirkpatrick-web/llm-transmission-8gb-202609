@@ -1,8 +1,8 @@
 {
-  "version": "2.2.0",
-  "source": "jetson-model-zoo (27 models, temp+top_k sweeps, 2026-09-02) + E2B chatml fix (2026-09-02)",
+  "version": "3.0.0",
+  "source": "jetson-model-zoo (27 models, temp+top_k+top_p sweeps, 2026-09-03) + E2B chatml fix (2026-09-02)",
   "hardware": "NVIDIA Jetson Nano 8GB, llama.cpp CUDA, -ngl 999 -fa on",
-  "methodology": "Temperature swept across 7 values (0.0-1.0), top_k swept across 3 values (20, 40, 64). Best temp locked per model. k=40 confirmed optimal for 21/27 models. DeepSeek R1 distills use chatml template (not deepseek). E2B MatFormer models use chatml (not gemma). Quality scores from 12-prompt benchmark across 6 categories.",
+  "methodology": "Temperature swept across 7 values (0.0-1.0), top_k swept across 3 values (20, 40, 64), top_p swept across 2 values (0.8, 0.9). Best temp locked per model. k=40 confirmed optimal for 21/27 models. top_p=0.9 confirmed optimal for 21/27 models (avg penalty -0.43 at 0.8). DeepSeek R1 distills use chatml template (not deepseek). E2B MatFormer models use chatml (not gemma). Quality scores from 12-prompt benchmark across 6 categories. 3,240 total scored rows.",
   "categories": {
     "coding_math": {
       "desc": "Python code, HTML pages, math proofs \u2014 structured generation requiring precision",
@@ -47,7 +47,8 @@
           "template": "chatml",
           "thinking": true,
           "best_temp": 0.0,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "lfm2.5-2.6b",
@@ -59,7 +60,8 @@
           "template": "chatml",
           "thinking": false,
           "best_temp": 0.2,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "hermes3-3b-q4",
@@ -71,7 +73,8 @@
           "template": "chatml",
           "thinking": false,
           "best_temp": 0.7,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "hermes3-3b-q5",
@@ -83,7 +86,8 @@
           "template": "chatml",
           "thinking": false,
           "best_temp": 0.3,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "qwen3-1.7b",
@@ -95,7 +99,8 @@
           "template": "chatml",
           "thinking": false,
           "best_temp": 1.0,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "qwen3.5-2b",
@@ -107,7 +112,8 @@
           "template": "chatml",
           "thinking": true,
           "best_temp": 0.1,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         }
       ]
     },
@@ -149,7 +155,8 @@
           "template": "chatml",
           "thinking": true,
           "best_temp": 0.7,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "gemma4-e2b",
@@ -161,7 +168,8 @@
           "template": "chatml",
           "thinking": true,
           "best_temp": 0.7,
-          "top_k": 20
+          "top_k": 20,
+          "top_p": 0.9
         },
         {
           "model": "ministral-3b-reasoning",
@@ -173,7 +181,8 @@
           "template": "chatml",
           "thinking": true,
           "best_temp": 0.3,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "hermes3-3b-q5",
@@ -185,7 +194,8 @@
           "template": "chatml",
           "thinking": false,
           "best_temp": 0.3,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "qwen3.5-2b",
@@ -197,7 +207,8 @@
           "template": "chatml",
           "thinking": true,
           "best_temp": 0.1,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "granite4.1-3b",
@@ -209,7 +220,8 @@
           "template": "chatml",
           "thinking": false,
           "best_temp": 1.0,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         }
       ]
     },
@@ -251,7 +263,8 @@
           "template": "chatml",
           "thinking": true,
           "best_temp": 0.3,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "deepseek-r1-7b",
@@ -263,7 +276,8 @@
           "template": "chatml",
           "thinking": true,
           "best_temp": 0.0,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "hermes3-3b-q4",
@@ -275,7 +289,8 @@
           "template": "chatml",
           "thinking": false,
           "best_temp": 0.7,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "hermes3-3b-q5",
@@ -287,7 +302,8 @@
           "template": "chatml",
           "thinking": false,
           "best_temp": 0.3,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "qwen2.5-3b",
@@ -299,7 +315,8 @@
           "template": "chatml",
           "thinking": false,
           "best_temp": 0.3,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "qwen3-1.7b",
@@ -311,7 +328,8 @@
           "template": "chatml",
           "thinking": false,
           "best_temp": 1.0,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         }
       ]
     },
@@ -341,7 +359,8 @@
           "template": "chatml",
           "thinking": false,
           "best_temp": 0.3,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "smallthinker-3b",
@@ -353,7 +372,8 @@
           "template": "chatml",
           "thinking": true,
           "best_temp": 0.3,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "deepseek-r1-7b",
@@ -365,7 +385,8 @@
           "template": "chatml",
           "thinking": true,
           "best_temp": 0.0,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "hermes3-3b-q4",
@@ -377,7 +398,8 @@
           "template": "chatml",
           "thinking": false,
           "best_temp": 0.7,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "qwen2.5-3b",
@@ -389,7 +411,8 @@
           "template": "chatml",
           "thinking": false,
           "best_temp": 0.3,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         },
         {
           "model": "qwen3.5-2b",
@@ -401,10 +424,12 @@
           "template": "chatml",
           "thinking": true,
           "best_temp": 0.1,
-          "top_k": 40
+          "top_k": 40,
+          "top_p": 0.9
         }
       ]
     }
   },
-  "top_k_methodology": "Per-model optimal top_k from sweep. k=40 is optimal for 21/27 models. granite4-3b benefits from k=20 (+0.50) and smollm3 from k=64 (+0.33), but neither is in the routing table top 6. All routing table models use k=40."
+  "top_k_methodology": "Per-model optimal top_k from sweep. k=40 is optimal for 21/27 models. granite4-3b benefits from k=20 (+0.50) and smollm3 from k=64 (+0.33), but neither is in the routing table top 6. All routing table models use k=40.",
+  "top_p_methodology": "top_p=0.9 confirmed optimal for 21/27 models. Compared p=0.8 vs p=0.9 at matching temp+top_k. Only granite4-3b preferred 0.8 (+0.50). Biggest losses at 0.8: granite4.2-3b (-1.08), smallthinker-3b (-1.00), smollm3 (-0.92), llama3.2-3b (-0.92). Champion hermes3-3b-q5: 7.83 at p=0.9 vs 7.42 at p=0.8. All routing table models use p=0.9."
 }

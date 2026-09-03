@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
-  "description": "Complete optimal settings for all 27 benchmarked models. Includes models not in the routing table top 6 (e.g., granite4-3b prefers k=20, smollm3 prefers k=64). Use this file when adding new categories or expanding the routing table.",
-  "methodology": "Each model's best_temp and best_top_k determined by sweep (one variable at a time). All other params held constant: top_p=0.9, repeat_penalty=1.1, max_tokens=2048.",
+  "version": "2.0.0",
+  "description": "Complete optimal settings for all 27 benchmarked models. Includes models not in the routing table top 6 (e.g., granite4-3b prefers k=20, smollm3 prefers k=64). top_p=0.9 confirmed optimal for 21/27 models via dedicated sweep. Per-prompt best settings in best_settings_per_prompt.json (324 model\u00d7prompt combos). Use this file when adding new categories or expanding the routing table.",
+  "methodology": "Three sweeps, one variable at a time: (1) temp across 7 values, (2) top_k across 3 values, (3) top_p across 2 values (0.8, 0.9). top_p=0.9 confirmed optimal for 21/27 models (avg penalty -0.43 at 0.8). All other params held constant: repeat_penalty=1.1, max_tokens=2048. 3,240 total scored rows across 27 models \u00d7 12 prompts.",
   "models": {
     "deepseek-r1-1.5b": {
       "filename": "deepseek-r1-1.5b.gguf",

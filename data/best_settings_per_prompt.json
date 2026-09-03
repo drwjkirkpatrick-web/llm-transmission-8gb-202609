@@ -1,0 +1,4592 @@
+{
+  "deepseek-r1-1.5b": {
+    "creative_writing": {
+      "score": 7,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 32.7,
+      "elapsed": 21.01
+    },
+    "func_email": {
+      "score": 8,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 32.8,
+      "elapsed": 22.4
+    },
+    "func_read_file": {
+      "score": 4,
+      "params": {
+        "temp": 0.0,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 33.2,
+      "elapsed": 63.26
+    },
+    "func_sqlite": {
+      "score": 4,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 33.3,
+      "elapsed": 35.32
+    },
+    "func_terminal": {
+      "score": 4,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 33.3,
+      "elapsed": 43.52
+    },
+    "func_web_search": {
+      "score": 4,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 33.3,
+      "elapsed": 40.2
+    },
+    "func_write_file": {
+      "score": 4,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 32.8,
+      "elapsed": 46.5
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 33.1,
+      "elapsed": 65.1
+    },
+    "html_profiles": {
+      "score": 10,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 32.8,
+      "elapsed": 33.1
+    },
+    "iambic_pentameter": {
+      "score": 5,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 32.3,
+      "elapsed": 7.66
+    },
+    "math_proof": {
+      "score": 10,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 32.9,
+      "elapsed": 36.97
+    },
+    "python_code": {
+      "score": 7,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 33.0,
+      "elapsed": 65.38
+    }
+  },
+  "deepseek-r1-7b": {
+    "creative_writing": {
+      "score": 7,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 9.7,
+      "elapsed": 60.14
+    },
+    "func_email": {
+      "score": 8,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 9.7,
+      "elapsed": 33.99
+    },
+    "func_read_file": {
+      "score": 10,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 9.7,
+      "elapsed": 73.22
+    },
+    "func_sqlite": {
+      "score": 4,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 9.8,
+      "elapsed": 11.7
+    },
+    "func_terminal": {
+      "score": 4,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 9.8,
+      "elapsed": 11.32
+    },
+    "func_web_search": {
+      "score": 4,
+      "params": {
+        "temp": 0.0,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 9.8,
+      "elapsed": 11.53
+    },
+    "func_write_file": {
+      "score": 8,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 9.7,
+      "elapsed": 58.13
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 9.7,
+      "elapsed": 154.74
+    },
+    "html_profiles": {
+      "score": 10,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 9.7,
+      "elapsed": 161.18
+    },
+    "iambic_pentameter": {
+      "score": 3,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 9.8,
+      "elapsed": 9.8
+    },
+    "math_proof": {
+      "score": 10,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 9.7,
+      "elapsed": 116.94
+    },
+    "python_code": {
+      "score": 1,
+      "params": {
+        "temp": 0.0,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 9.8,
+      "elapsed": 13.16
+    }
+  },
+  "gemma2-2b": {
+    "creative_writing": {
+      "score": 9,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 22.2,
+      "elapsed": 17.39
+    },
+    "func_email": {
+      "score": 3,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 21.4,
+      "elapsed": 6.09
+    },
+    "func_read_file": {
+      "score": 8,
+      "params": {
+        "temp": 0.1,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 22.4,
+      "elapsed": 23.68
+    },
+    "func_sqlite": {
+      "score": 8,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 22.4,
+      "elapsed": 27.49
+    },
+    "func_terminal": {
+      "score": 8,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 22.3,
+      "elapsed": 27.16
+    },
+    "func_web_search": {
+      "score": 6,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 22.2,
+      "elapsed": 25.13
+    },
+    "func_write_file": {
+      "score": 8,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 22.3,
+      "elapsed": 20.07
+    },
+    "html_game": {
+      "score": 2,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 22.2,
+      "elapsed": 21.82
+    },
+    "html_profiles": {
+      "score": 2,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 22.8,
+      "elapsed": 24.08
+    },
+    "iambic_pentameter": {
+      "score": 4,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 22.1,
+      "elapsed": 34.77
+    },
+    "math_proof": {
+      "score": 4,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 22.2,
+      "elapsed": 35.98
+    },
+    "python_code": {
+      "score": 6,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 22.3,
+      "elapsed": 23.5
+    }
+  },
+  "gemma3-1b": {
+    "creative_writing": {
+      "score": 6,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 31.3,
+      "elapsed": 24.75
+    },
+    "func_email": {
+      "score": 3,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 31.0,
+      "elapsed": 8.5
+    },
+    "func_read_file": {
+      "score": 4,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 28.2,
+      "elapsed": 5.95
+    },
+    "func_sqlite": {
+      "score": 4,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 31.3,
+      "elapsed": 16.71
+    },
+    "func_terminal": {
+      "score": 2,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 30.9,
+      "elapsed": 10.62
+    },
+    "func_web_search": {
+      "score": 4,
+      "params": {
+        "temp": 1.0,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 31.7,
+      "elapsed": 24.02
+    },
+    "func_write_file": {
+      "score": 4,
+      "params": {
+        "temp": 1.0,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 31.9,
+      "elapsed": 19.28
+    },
+    "html_game": {
+      "score": 3,
+      "params": {
+        "temp": 1.0,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 32.4,
+      "elapsed": 67.63
+    },
+    "html_profiles": {
+      "score": 2,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 31.5,
+      "elapsed": 32.05
+    },
+    "iambic_pentameter": {
+      "score": 6,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 31.3,
+      "elapsed": 10.63
+    },
+    "math_proof": {
+      "score": 6,
+      "params": {
+        "temp": 1.0,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 31.8,
+      "elapsed": 46.31
+    },
+    "python_code": {
+      "score": 4,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 32.5,
+      "elapsed": 22.09
+    }
+  },
+  "gemma3n-e2b": {
+    "creative_writing": {
+      "score": 9,
+      "params": {
+        "temp": 0.7,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 21.4,
+      "elapsed": 21.11
+    },
+    "func_email": {
+      "score": 9,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 21.3,
+      "elapsed": 10.57
+    },
+    "func_read_file": {
+      "score": 2,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 21.5,
+      "elapsed": 15.26
+    },
+    "func_sqlite": {
+      "score": 8,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 21.6,
+      "elapsed": 60.96
+    },
+    "func_terminal": {
+      "score": 10,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 21.6,
+      "elapsed": 51.34
+    },
+    "func_web_search": {
+      "score": 4,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 22.0,
+      "elapsed": 55.33
+    },
+    "func_write_file": {
+      "score": 6,
+      "params": {
+        "temp": 0.7,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 21.5,
+      "elapsed": 14.78
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.7,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 21.6,
+      "elapsed": 42.93
+    },
+    "html_profiles": {
+      "score": 10,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 21.7,
+      "elapsed": 48.82
+    },
+    "iambic_pentameter": {
+      "score": 10,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 21.5,
+      "elapsed": 13.31
+    },
+    "math_proof": {
+      "score": 8,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 21.6,
+      "elapsed": 30.58
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 0.7,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 21.7,
+      "elapsed": 26.75
+    }
+  },
+  "gemma4-e2b": {
+    "creative_writing": {
+      "score": 10,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 23.6,
+      "elapsed": 23.74
+    },
+    "func_email": {
+      "score": 9,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 22.5,
+      "elapsed": 14.22
+    },
+    "func_read_file": {
+      "score": 2,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 23.2,
+      "elapsed": 13.17
+    },
+    "func_sqlite": {
+      "score": 2,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 22.4,
+      "elapsed": 14.05
+    },
+    "func_terminal": {
+      "score": 2,
+      "params": {
+        "temp": 0.7,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 22.9,
+      "elapsed": 13.41
+    },
+    "func_web_search": {
+      "score": 2,
+      "params": {
+        "temp": 0.7,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 23.5,
+      "elapsed": 16.8
+    },
+    "func_write_file": {
+      "score": 2,
+      "params": {
+        "temp": 0.7,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 23.1,
+      "elapsed": 12.87
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 23.8,
+      "elapsed": 78.07
+    },
+    "html_profiles": {
+      "score": 10,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 23.8,
+      "elapsed": 58.1
+    },
+    "iambic_pentameter": {
+      "score": 10,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 23.2,
+      "elapsed": 14.58
+    },
+    "math_proof": {
+      "score": 8,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 23.8,
+      "elapsed": 34.86
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 0.7,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 23.8,
+      "elapsed": 29.89
+    }
+  },
+  "granite3.2-2b": {
+    "creative_writing": {
+      "score": 8,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 26.6,
+      "elapsed": 20.93
+    },
+    "func_email": {
+      "score": 8,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 26.7,
+      "elapsed": 9.05
+    },
+    "func_read_file": {
+      "score": 2,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 26.6,
+      "elapsed": 5.45
+    },
+    "func_sqlite": {
+      "score": 2,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 26.6,
+      "elapsed": 9.52
+    },
+    "func_terminal": {
+      "score": 8,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 26.8,
+      "elapsed": 9.52
+    },
+    "func_web_search": {
+      "score": 4,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 26.6,
+      "elapsed": 23.25
+    },
+    "func_write_file": {
+      "score": 10,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 26.6,
+      "elapsed": 14.39
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 26.5,
+      "elapsed": 32.12
+    },
+    "html_profiles": {
+      "score": 10,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 26.5,
+      "elapsed": 25.76
+    },
+    "iambic_pentameter": {
+      "score": 7,
+      "params": {
+        "temp": 0.3,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 26.6,
+      "elapsed": 9.81
+    },
+    "math_proof": {
+      "score": 10,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 26.6,
+      "elapsed": 19.03
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 0.3,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 26.6,
+      "elapsed": 17.46
+    }
+  },
+  "granite4-3b": {
+    "creative_writing": {
+      "score": 10,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 18.8,
+      "elapsed": 19.91
+    },
+    "func_email": {
+      "score": 9,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 18.8,
+      "elapsed": 7.45
+    },
+    "func_read_file": {
+      "score": 6,
+      "params": {
+        "temp": 0.7,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 19.1,
+      "elapsed": 11.85
+    },
+    "func_sqlite": {
+      "score": 8,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 18.8,
+      "elapsed": 30.74
+    },
+    "func_terminal": {
+      "score": 8,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 18.9,
+      "elapsed": 11.5
+    },
+    "func_web_search": {
+      "score": 2,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 19.0,
+      "elapsed": 19.67
+    },
+    "func_write_file": {
+      "score": 8,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 18.9,
+      "elapsed": 15.86
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 18.8,
+      "elapsed": 37.18
+    },
+    "html_profiles": {
+      "score": 10,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 18.8,
+      "elapsed": 40.09
+    },
+    "iambic_pentameter": {
+      "score": 9,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 19.0,
+      "elapsed": 8.38
+    },
+    "math_proof": {
+      "score": 9,
+      "params": {
+        "temp": 0.7,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 18.9,
+      "elapsed": 27.82
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 18.9,
+      "elapsed": 20.52
+    }
+  },
+  "granite4.1-3b": {
+    "creative_writing": {
+      "score": 9,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 19.0,
+      "elapsed": 19.43
+    },
+    "func_email": {
+      "score": 9,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 18.7,
+      "elapsed": 7.05
+    },
+    "func_read_file": {
+      "score": 10,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 19.0,
+      "elapsed": 9.38
+    },
+    "func_sqlite": {
+      "score": 10,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 19.1,
+      "elapsed": 16.9
+    },
+    "func_terminal": {
+      "score": 8,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 18.9,
+      "elapsed": 13.37
+    },
+    "func_web_search": {
+      "score": 2,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 19.0,
+      "elapsed": 28.14
+    },
+    "func_write_file": {
+      "score": 8,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 19.0,
+      "elapsed": 9.31
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 18.8,
+      "elapsed": 33.83
+    },
+    "html_profiles": {
+      "score": 9,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 18.9,
+      "elapsed": 35.96
+    },
+    "iambic_pentameter": {
+      "score": 8,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 18.9,
+      "elapsed": 6.87
+    },
+    "math_proof": {
+      "score": 9,
+      "params": {
+        "temp": 1.0,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 18.9,
+      "elapsed": 29.35
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 18.9,
+      "elapsed": 21.37
+    }
+  },
+  "granite4.2-3b": {
+    "creative_writing": {
+      "score": 8,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 18.8,
+      "elapsed": 29.22
+    },
+    "func_email": {
+      "score": 8,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 19.1,
+      "elapsed": 6.72
+    },
+    "func_read_file": {
+      "score": 2,
+      "params": {
+        "temp": 1.0,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 19.0,
+      "elapsed": 7.61
+    },
+    "func_sqlite": {
+      "score": 10,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 18.8,
+      "elapsed": 40.94
+    },
+    "func_terminal": {
+      "score": 2,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 18.9,
+      "elapsed": 19.75
+    },
+    "func_web_search": {
+      "score": 4,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 18.9,
+      "elapsed": 19.02
+    },
+    "func_write_file": {
+      "score": 10,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 19.0,
+      "elapsed": 12.38
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 18.7,
+      "elapsed": 73.11
+    },
+    "html_profiles": {
+      "score": 10,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 18.9,
+      "elapsed": 54.11
+    },
+    "iambic_pentameter": {
+      "score": 6,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 19.0,
+      "elapsed": 8.17
+    },
+    "math_proof": {
+      "score": 8,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 18.9,
+      "elapsed": 30.03
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 18.8,
+      "elapsed": 48.56
+    }
+  },
+  "hermes3-3b-q4": {
+    "creative_writing": {
+      "score": 10,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 19.7,
+      "elapsed": 17.21
+    },
+    "func_email": {
+      "score": 8,
+      "params": {
+        "temp": 0.7,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 19.7,
+      "elapsed": 9.07
+    },
+    "func_read_file": {
+      "score": 8,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 19.7,
+      "elapsed": 12.34
+    },
+    "func_sqlite": {
+      "score": 8,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 19.6,
+      "elapsed": 25.15
+    },
+    "func_terminal": {
+      "score": 8,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 19.8,
+      "elapsed": 13.19
+    },
+    "func_web_search": {
+      "score": 2,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 19.7,
+      "elapsed": 22.59
+    },
+    "func_write_file": {
+      "score": 8,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 19.7,
+      "elapsed": 11.75
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 19.7,
+      "elapsed": 36.92
+    },
+    "html_profiles": {
+      "score": 10,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 19.6,
+      "elapsed": 36.33
+    },
+    "iambic_pentameter": {
+      "score": 8,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 19.6,
+      "elapsed": 8.5
+    },
+    "math_proof": {
+      "score": 10,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 19.7,
+      "elapsed": 28.48
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 19.7,
+      "elapsed": 26.3
+    }
+  },
+  "hermes3-3b-q5": {
+    "creative_writing": {
+      "score": 10,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 19.4,
+      "elapsed": 17.88
+    },
+    "func_email": {
+      "score": 9,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 19.5,
+      "elapsed": 11.99
+    },
+    "func_read_file": {
+      "score": 8,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 19.4,
+      "elapsed": 14.14
+    },
+    "func_sqlite": {
+      "score": 4,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 19.4,
+      "elapsed": 16.81
+    },
+    "func_terminal": {
+      "score": 8,
+      "params": {
+        "temp": 0.3,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 19.4,
+      "elapsed": 13.89
+    },
+    "func_web_search": {
+      "score": 2,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 19.5,
+      "elapsed": 24.96
+    },
+    "func_write_file": {
+      "score": 10,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 19.4,
+      "elapsed": 20.01
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 19.3,
+      "elapsed": 37.38
+    },
+    "html_profiles": {
+      "score": 10,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 19.4,
+      "elapsed": 35.41
+    },
+    "iambic_pentameter": {
+      "score": 8,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 19.4,
+      "elapsed": 8.71
+    },
+    "math_proof": {
+      "score": 9,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 19.5,
+      "elapsed": 22.45
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 19.4,
+      "elapsed": 24.07
+    }
+  },
+  "lfm2.5-2.6b": {
+    "creative_writing": {
+      "score": 8,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 23.8,
+      "elapsed": 58.24
+    },
+    "func_email": {
+      "score": 8,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 23.8,
+      "elapsed": 13.8
+    },
+    "func_read_file": {
+      "score": 8,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 23.8,
+      "elapsed": 16.76
+    },
+    "func_sqlite": {
+      "score": 6,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 23.6,
+      "elapsed": 41.6
+    },
+    "func_terminal": {
+      "score": 6,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 23.8,
+      "elapsed": 24.15
+    },
+    "func_web_search": {
+      "score": 4,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 23.8,
+      "elapsed": 9.44
+    },
+    "func_write_file": {
+      "score": 2,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 23.7,
+      "elapsed": 20.14
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 23.9,
+      "elapsed": 90.1
+    },
+    "html_profiles": {
+      "score": 10,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 23.9,
+      "elapsed": 90.86
+    },
+    "iambic_pentameter": {
+      "score": 4,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 23.9,
+      "elapsed": 90.16
+    },
+    "math_proof": {
+      "score": 10,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 23.9,
+      "elapsed": 65.21
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 23.8,
+      "elapsed": 71.38
+    }
+  },
+  "llama3.2-1b": {
+    "creative_writing": {
+      "score": 6,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 42.1,
+      "elapsed": 10.07
+    },
+    "func_email": {
+      "score": 3,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 41.4,
+      "elapsed": 6.44
+    },
+    "func_read_file": {
+      "score": 4,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 40.2,
+      "elapsed": 5.83
+    },
+    "func_sqlite": {
+      "score": 6,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 43.5,
+      "elapsed": 18.18
+    },
+    "func_terminal": {
+      "score": 4,
+      "params": {
+        "temp": 0.3,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 42.2,
+      "elapsed": 12.14
+    },
+    "func_web_search": {
+      "score": 2,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 40.9,
+      "elapsed": 5.87
+    },
+    "func_write_file": {
+      "score": 4,
+      "params": {
+        "temp": 0.3,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 40.1,
+      "elapsed": 6.01
+    },
+    "html_game": {
+      "score": 1,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 41.2,
+      "elapsed": 7.21
+    },
+    "html_profiles": {
+      "score": 2,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 43.4,
+      "elapsed": 12.86
+    },
+    "iambic_pentameter": {
+      "score": 4,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 43.3,
+      "elapsed": 12.99
+    },
+    "math_proof": {
+      "score": 4,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 42.6,
+      "elapsed": 10.8
+    },
+    "python_code": {
+      "score": 5,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 42.9,
+      "elapsed": 33.81
+    }
+  },
+  "llama3.2-3b": {
+    "creative_writing": {
+      "score": 9,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 19.9,
+      "elapsed": 22.07
+    },
+    "func_email": {
+      "score": 2,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 19.8,
+      "elapsed": 24.96
+    },
+    "func_read_file": {
+      "score": 6,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 19.8,
+      "elapsed": 23.64
+    },
+    "func_sqlite": {
+      "score": 4,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 19.5,
+      "elapsed": 81.84
+    },
+    "func_terminal": {
+      "score": 2,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 19.7,
+      "elapsed": 16.6
+    },
+    "func_web_search": {
+      "score": 2,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 19.8,
+      "elapsed": 20.98
+    },
+    "func_write_file": {
+      "score": 8,
+      "params": {
+        "temp": 1.0,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 19.8,
+      "elapsed": 36.41
+    },
+    "html_game": {
+      "score": 3,
+      "params": {
+        "temp": 1.0,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 19.7,
+      "elapsed": 26.68
+    },
+    "html_profiles": {
+      "score": 1,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 19.7,
+      "elapsed": 17.91
+    },
+    "iambic_pentameter": {
+      "score": 5,
+      "params": {
+        "temp": 1.0,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 19.8,
+      "elapsed": 17.92
+    },
+    "math_proof": {
+      "score": 4,
+      "params": {
+        "temp": 1.0,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 19.7,
+      "elapsed": 15.08
+    },
+    "python_code": {
+      "score": 4,
+      "params": {
+        "temp": 1.0,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 19.7,
+      "elapsed": 43.49
+    }
+  },
+  "llama3.2-3b-new": {
+    "creative_writing": {
+      "score": 6,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 19.9,
+      "elapsed": 30.5
+    },
+    "func_email": {
+      "score": 3,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 19.7,
+      "elapsed": 32.11
+    },
+    "func_read_file": {
+      "score": 2,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 19.6,
+      "elapsed": 8.5
+    },
+    "func_sqlite": {
+      "score": 4,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 19.7,
+      "elapsed": 17.23
+    },
+    "func_terminal": {
+      "score": 2,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 19.7,
+      "elapsed": 15.23
+    },
+    "func_web_search": {
+      "score": 2,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 19.8,
+      "elapsed": 20.95
+    },
+    "func_write_file": {
+      "score": 4,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 19.6,
+      "elapsed": 58.85
+    },
+    "html_game": {
+      "score": 1,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 19.7,
+      "elapsed": 18.86
+    },
+    "html_profiles": {
+      "score": 2,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 19.6,
+      "elapsed": 29.01
+    },
+    "iambic_pentameter": {
+      "score": 4,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 19.7,
+      "elapsed": 24.48
+    },
+    "math_proof": {
+      "score": 2,
+      "params": {
+        "temp": 0.0,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 19.7,
+      "elapsed": 32.16
+    },
+    "python_code": {
+      "score": 2,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 19.8,
+      "elapsed": 22.17
+    }
+  },
+  "ministral-3b": {
+    "creative_writing": {
+      "score": 7,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 24.7,
+      "elapsed": 85.64
+    },
+    "func_email": {
+      "score": 8,
+      "params": {
+        "temp": 0.5,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 24.7,
+      "elapsed": 85.48
+    },
+    "func_read_file": {
+      "score": 6,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 24.8,
+      "elapsed": 85.2
+    },
+    "func_sqlite": {
+      "score": 8,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 24.7,
+      "elapsed": 85.58
+    },
+    "func_terminal": {
+      "score": 6,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 24.7,
+      "elapsed": 85.56
+    },
+    "func_web_search": {
+      "score": 2,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 25.1,
+      "elapsed": 24.81
+    },
+    "func_write_file": {
+      "score": 6,
+      "params": {
+        "temp": 0.5,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 24.7,
+      "elapsed": 85.46
+    },
+    "html_game": {
+      "score": 8,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 24.7,
+      "elapsed": 87.33
+    },
+    "html_profiles": {
+      "score": 7,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 24.7,
+      "elapsed": 86.84
+    },
+    "iambic_pentameter": {
+      "score": 5,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 24.7,
+      "elapsed": 85.54
+    },
+    "math_proof": {
+      "score": 8,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 24.7,
+      "elapsed": 85.62
+    },
+    "python_code": {
+      "score": 8,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 24.8,
+      "elapsed": 85.69
+    }
+  },
+  "ministral-3b-reasoning": {
+    "creative_writing": {
+      "score": 9,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 18.6,
+      "elapsed": 19.87
+    },
+    "func_email": {
+      "score": 9,
+      "params": {
+        "temp": 0.3,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 18.8,
+      "elapsed": 8.48
+    },
+    "func_read_file": {
+      "score": 1,
+      "params": {
+        "temp": 0.3,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 18.9,
+      "elapsed": 6.13
+    },
+    "func_sqlite": {
+      "score": 2,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 18.7,
+      "elapsed": 7.58
+    },
+    "func_terminal": {
+      "score": 10,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 18.8,
+      "elapsed": 10.46
+    },
+    "func_web_search": {
+      "score": 2,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 18.8,
+      "elapsed": 17.37
+    },
+    "func_write_file": {
+      "score": 8,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 18.6,
+      "elapsed": 10.28
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 18.6,
+      "elapsed": 61.74
+    },
+    "html_profiles": {
+      "score": 10,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 18.7,
+      "elapsed": 41.19
+    },
+    "iambic_pentameter": {
+      "score": 10,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 18.8,
+      "elapsed": 8.61
+    },
+    "math_proof": {
+      "score": 8,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 18.8,
+      "elapsed": 19.73
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 0.3,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 18.8,
+      "elapsed": 22.49
+    }
+  },
+  "phi3-3.8b": {
+    "creative_writing": {
+      "score": 4,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 19.3,
+      "elapsed": 57.75
+    },
+    "func_email": {
+      "score": 3,
+      "params": {
+        "temp": 0.2,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 20.2,
+      "elapsed": 36.44
+    },
+    "func_read_file": {
+      "score": 2,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 21.3,
+      "elapsed": 11.41
+    },
+    "func_sqlite": {
+      "score": 2,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 21.2,
+      "elapsed": 12.03
+    },
+    "func_terminal": {
+      "score": 4,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 17.3,
+      "elapsed": 123.83
+    },
+    "func_web_search": {
+      "score": 2,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 19.8,
+      "elapsed": 44.55
+    },
+    "func_write_file": {
+      "score": 2,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 20.7,
+      "elapsed": 25.67
+    },
+    "html_game": {
+      "score": 3,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 17.2,
+      "elapsed": 124.08
+    },
+    "html_profiles": {
+      "score": 1,
+      "params": {
+        "temp": 0.2,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 19.6,
+      "elapsed": 50.47
+    },
+    "iambic_pentameter": {
+      "score": 4,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 17.3,
+      "elapsed": 123.57
+    },
+    "math_proof": {
+      "score": 6,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 17.3,
+      "elapsed": 124.43
+    },
+    "python_code": {
+      "score": 4,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 18.4,
+      "elapsed": 83.09
+    }
+  },
+  "phi4-mini": {
+    "creative_writing": {
+      "score": 5,
+      "params": {
+        "temp": 1.0,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 16.9,
+      "elapsed": 90.41
+    },
+    "func_email": {
+      "score": 3,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 17.1,
+      "elapsed": 27.52
+    },
+    "func_read_file": {
+      "score": 4,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 17.1,
+      "elapsed": 22.8
+    },
+    "func_sqlite": {
+      "score": 2,
+      "params": {
+        "temp": 1.0,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 17.0,
+      "elapsed": 22.16
+    },
+    "func_terminal": {
+      "score": 4,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 17.0,
+      "elapsed": 58.66
+    },
+    "func_web_search": {
+      "score": 2,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 16.9,
+      "elapsed": 11.67
+    },
+    "func_write_file": {
+      "score": 2,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 16.9,
+      "elapsed": 14.43
+    },
+    "html_game": {
+      "score": 2,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 17.1,
+      "elapsed": 37.11
+    },
+    "html_profiles": {
+      "score": 1,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 16.9,
+      "elapsed": 30.72
+    },
+    "iambic_pentameter": {
+      "score": 4,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 17.2,
+      "elapsed": 14.47
+    },
+    "math_proof": {
+      "score": 5,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 16.8,
+      "elapsed": 130.03
+    },
+    "python_code": {
+      "score": 3,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 16.9,
+      "elapsed": 109.6
+    }
+  },
+  "qwen2.5-3b": {
+    "creative_writing": {
+      "score": 10,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 20.2,
+      "elapsed": 17.58
+    },
+    "func_email": {
+      "score": 9,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 20.0,
+      "elapsed": 8.36
+    },
+    "func_read_file": {
+      "score": 8,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 19.9,
+      "elapsed": 8.25
+    },
+    "func_sqlite": {
+      "score": 8,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 20.1,
+      "elapsed": 27.82
+    },
+    "func_terminal": {
+      "score": 8,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 20.1,
+      "elapsed": 21.98
+    },
+    "func_web_search": {
+      "score": 2,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 20.3,
+      "elapsed": 15.79
+    },
+    "func_write_file": {
+      "score": 8,
+      "params": {
+        "temp": 0.3,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 20.0,
+      "elapsed": 14.05
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 20.1,
+      "elapsed": 39.53
+    },
+    "html_profiles": {
+      "score": 10,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 20.1,
+      "elapsed": 32.6
+    },
+    "iambic_pentameter": {
+      "score": 8,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 19.9,
+      "elapsed": 7.05
+    },
+    "math_proof": {
+      "score": 9,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 20.1,
+      "elapsed": 28.47
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 20.1,
+      "elapsed": 27.5
+    }
+  },
+  "qwen2.5-coder-3b": {
+    "creative_writing": {
+      "score": 10,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 20.3,
+      "elapsed": 16.77
+    },
+    "func_email": {
+      "score": 9,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 19.9,
+      "elapsed": 8.0
+    },
+    "func_read_file": {
+      "score": 1,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 17.5,
+      "elapsed": 4.92
+    },
+    "func_sqlite": {
+      "score": 2,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 20.0,
+      "elapsed": 11.64
+    },
+    "func_terminal": {
+      "score": 8,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 20.1,
+      "elapsed": 12.03
+    },
+    "func_web_search": {
+      "score": 4,
+      "params": {
+        "temp": 0.1,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 20.1,
+      "elapsed": 14.67
+    },
+    "func_write_file": {
+      "score": 8,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 20.2,
+      "elapsed": 8.44
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 20.2,
+      "elapsed": 34.01
+    },
+    "html_profiles": {
+      "score": 10,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 20.2,
+      "elapsed": 31.83
+    },
+    "iambic_pentameter": {
+      "score": 9,
+      "params": {
+        "temp": 0.1,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 19.9,
+      "elapsed": 7.45
+    },
+    "math_proof": {
+      "score": 9,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 20.2,
+      "elapsed": 33.8
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 20.2,
+      "elapsed": 20.37
+    }
+  },
+  "qwen3-1.7b": {
+    "creative_writing": {
+      "score": 8,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 30.9,
+      "elapsed": 15.0
+    },
+    "func_email": {
+      "score": 8,
+      "params": {
+        "temp": 1.0,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 31.1,
+      "elapsed": 12.45
+    },
+    "func_read_file": {
+      "score": 8,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 31.2,
+      "elapsed": 16.51
+    },
+    "func_sqlite": {
+      "score": 6,
+      "params": {
+        "temp": 1.0,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 31.0,
+      "elapsed": 26.54
+    },
+    "func_terminal": {
+      "score": 10,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 31.0,
+      "elapsed": 25.77
+    },
+    "func_web_search": {
+      "score": 4,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 31.4,
+      "elapsed": 33.67
+    },
+    "func_write_file": {
+      "score": 10,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 30.9,
+      "elapsed": 26.34
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 1.0,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 30.4,
+      "elapsed": 70.84
+    },
+    "html_profiles": {
+      "score": 10,
+      "params": {
+        "temp": 1.0,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 30.9,
+      "elapsed": 35.88
+    },
+    "iambic_pentameter": {
+      "score": 4,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 30.7,
+      "elapsed": 38.9
+    },
+    "math_proof": {
+      "score": 10,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 30.8,
+      "elapsed": 40.67
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 30.5,
+      "elapsed": 70.64
+    }
+  },
+  "qwen3.5-2b": {
+    "creative_writing": {
+      "score": 9,
+      "params": {
+        "temp": 0.1,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 25.0,
+      "elapsed": 18.64
+    },
+    "func_email": {
+      "score": 9,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 24.4,
+      "elapsed": 8.02
+    },
+    "func_read_file": {
+      "score": 2,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 24.2,
+      "elapsed": 8.02
+    },
+    "func_sqlite": {
+      "score": 6,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 24.8,
+      "elapsed": 18.18
+    },
+    "func_terminal": {
+      "score": 10,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 24.9,
+      "elapsed": 27.0
+    },
+    "func_web_search": {
+      "score": 2,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 25.5,
+      "elapsed": 30.72
+    },
+    "func_write_file": {
+      "score": 8,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 24.4,
+      "elapsed": 9.97
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.1,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 25.1,
+      "elapsed": 79.17
+    },
+    "html_profiles": {
+      "score": 10,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 25.2,
+      "elapsed": 55.63
+    },
+    "iambic_pentameter": {
+      "score": 10,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 24.6,
+      "elapsed": 8.19
+    },
+    "math_proof": {
+      "score": 9,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 24.9,
+      "elapsed": 31.0
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 25.0,
+      "elapsed": 29.31
+    }
+  },
+  "smallthinker-3b": {
+    "creative_writing": {
+      "score": 8,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 20.2,
+      "elapsed": 22.95
+    },
+    "func_email": {
+      "score": 8,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 20.1,
+      "elapsed": 26.15
+    },
+    "func_read_file": {
+      "score": 8,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 20.2,
+      "elapsed": 35.12
+    },
+    "func_sqlite": {
+      "score": 10,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 20.1,
+      "elapsed": 105.67
+    },
+    "func_terminal": {
+      "score": 10,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 20.3,
+      "elapsed": 38.01
+    },
+    "func_web_search": {
+      "score": 4,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 20.3,
+      "elapsed": 30.87
+    },
+    "func_write_file": {
+      "score": 10,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 20.1,
+      "elapsed": 53.86
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 20.1,
+      "elapsed": 86.73
+    },
+    "html_profiles": {
+      "score": 9,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 20.2,
+      "elapsed": 80.95
+    },
+    "iambic_pentameter": {
+      "score": 4,
+      "params": {
+        "temp": 0.3,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 20.1,
+      "elapsed": 28.63
+    },
+    "math_proof": {
+      "score": 10,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 20.1,
+      "elapsed": 64.04
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 0.3,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 20.1,
+      "elapsed": 50.91
+    }
+  },
+  "smollm3": {
+    "creative_writing": {
+      "score": 9,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 20.8,
+      "elapsed": 20.31
+    },
+    "func_email": {
+      "score": 9,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 20.8,
+      "elapsed": 8.92
+    },
+    "func_read_file": {
+      "score": 8,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 20.7,
+      "elapsed": 13.46
+    },
+    "func_sqlite": {
+      "score": 8,
+      "params": {
+        "temp": 0.5,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 20.7,
+      "elapsed": 18.19
+    },
+    "func_terminal": {
+      "score": 10,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 20.9,
+      "elapsed": 24.37
+    },
+    "func_web_search": {
+      "score": 2,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 20.8,
+      "elapsed": 14.91
+    },
+    "func_write_file": {
+      "score": 8,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 20.8,
+      "elapsed": 22.58
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 20.7,
+      "elapsed": 36.93
+    },
+    "html_profiles": {
+      "score": 9,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 20.7,
+      "elapsed": 34.35
+    },
+    "iambic_pentameter": {
+      "score": 8,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 20.6,
+      "elapsed": 6.98
+    },
+    "math_proof": {
+      "score": 9,
+      "params": {
+        "temp": 1.0,
+        "top_k": 64,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 20.8,
+      "elapsed": 30.22
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 0.1,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 20.8,
+      "elapsed": 20.33
+    }
+  },
+  "stablelm-zephyr": {
+    "creative_writing": {
+      "score": 9,
+      "params": {
+        "temp": 0.2,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "creative",
+      "prompt_name": "Creative Writing - Short Story",
+      "gen_tps": 26.7,
+      "elapsed": 14.7
+    },
+    "func_email": {
+      "score": 8,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Email Draft",
+      "gen_tps": 27.3,
+      "elapsed": 8.86
+    },
+    "func_read_file": {
+      "score": 2,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Read File",
+      "gen_tps": 27.1,
+      "elapsed": 5.49
+    },
+    "func_sqlite": {
+      "score": 2,
+      "params": {
+        "temp": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: SQLite Query",
+      "gen_tps": 27.4,
+      "elapsed": 7.76
+    },
+    "func_terminal": {
+      "score": 2,
+      "params": {
+        "temp": 0.3,
+        "top_k": 20,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Terminal Command",
+      "gen_tps": 27.3,
+      "elapsed": 9.38
+    },
+    "func_web_search": {
+      "score": 4,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Web Search",
+      "gen_tps": 26.8,
+      "elapsed": 15.06
+    },
+    "func_write_file": {
+      "score": 8,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "function_call",
+      "prompt_name": "Function Call: Write File",
+      "gen_tps": 26.3,
+      "elapsed": 17.82
+    },
+    "html_game": {
+      "score": 10,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Web Browser Game",
+      "gen_tps": 25.0,
+      "elapsed": 36.19
+    },
+    "html_profiles": {
+      "score": 10,
+      "params": {
+        "temp": 1.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "html",
+      "prompt_name": "HTML Profile Cards Page",
+      "gen_tps": 24.9,
+      "elapsed": 37.14
+    },
+    "iambic_pentameter": {
+      "score": 9,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "poetry",
+      "prompt_name": "Iambic Pentameter Poem",
+      "gen_tps": 27.4,
+      "elapsed": 6.36
+    },
+    "math_proof": {
+      "score": 9,
+      "params": {
+        "temp": 0.3,
+        "top_k": 40,
+        "top_p": 0.8,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "math",
+      "prompt_name": "Mathematical Proof",
+      "gen_tps": 26.4,
+      "elapsed": 19.91
+    },
+    "python_code": {
+      "score": 10,
+      "params": {
+        "temp": 0.0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1,
+        "max_tokens": 2048
+      },
+      "category": "python",
+      "prompt_name": "Python Data Processing",
+      "gen_tps": 26.3,
+      "elapsed": 18.15
+    }
+  }
+}

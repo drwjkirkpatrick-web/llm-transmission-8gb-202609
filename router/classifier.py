@@ -2,7 +2,7 @@
 Prompt classifier — determines what category of task a prompt is asking for.
 
 Uses keyword matching + heuristics to classify prompts into one of 4 categories
-derived from the jetson-model-zoo benchmark results (27 models, 2026-09-02).
+derived from the jetson-model-zoo benchmark results (27 models, 3 sweeps, 2026-09-03).
 
 Categories:
   coding_math:     Python, HTML, math proofs — structured generation
