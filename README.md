@@ -12,11 +12,14 @@
 
 ![Categories](https://img.shields.io/badge/categories-4-purple.svg)
 ![Top Models](https://img.shields.io/badge/top%20models-6%20per%20category-ff69b4.svg)
-![DeepSeek Fix](https://img.shields.io/badge/DeepSeek-chatml%20fix-yellow.svg)
-![E2B Fix](https://img.shields.io/badge/E2B-chatml%20fix-yellow.svg)
-![k=40](https://img.shields.io/badge/top_k-40%20optimal-blueviolet.svg)
+![DeepSeek Fix](https://img.shields.io/badge/DeepSeek-chatml%20fix%20(43--158%25)-yellow.svg)
+![E2B Fix](https://img.shields.io/badge/E2B-chatml%20fix%20(273--650%25)-yellow.svg)
+![k=40](https://img.shields.io/badge/top_k-40%20optimal%20(21%2F27)-blueviolet.svg)
 ![Champion](https://img.shields.io/badge/champion-hermes3--3b--q5%20(7.8)--gold.svg)
 ![Report](https://img.shields.io/badge/findings%20report-25%20page%20PDF-success.svg)
+![Coding #1](https://img.shields.io/badge/coding%231-DeepSeek%20R1%207B%20%2B%20LFM%202.5%20(10.0)-blue.svg)
+![Creative #1](https://img.shields.io/badge/creative%231-Gemma%203n%20E2B%20(9.5)-ff69b4.svg)
+![Func #1](https://img.shields.io/badge/func%20call%231-SmallThinker%203B%20(7.7)-orange.svg)
 
 A local LLM routing service for the NVIDIA Jetson Nano 8GB. Classifies incoming prompts, presents the top 6 model options to the operator, then runs the prompt with the selected model using its best settings — all locally, zero cloud tokens.
 
